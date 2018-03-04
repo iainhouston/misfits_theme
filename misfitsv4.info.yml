@@ -1,0 +1,26 @@
+name: Misfitsv4
+type: theme
+base theme: stable
+description: Misfits Theatre Company theme for Drupal 8
+version: "0.1"
+core: 8.x
+# libraries:
+#   - misfitsv4/global-styling
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer: Footer
+
+libraries-override:
+  core/assets/vendor/normalize-css/normalize.css: false
+  core/modules/system/css/system.module.css: false
+  core/modules/system/css/system.theme.css: false
+  core/modules/views/css/views.module.css: false
