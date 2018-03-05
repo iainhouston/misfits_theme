@@ -9,12 +9,8 @@ core: 8.x
 regions:
   header: Header
   primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  highlighted: Highlighted
-  featured_top: 'Featured top'
-  breadcrumb: Breadcrumb
+  highlighted: 'Highlighted'
+  help: 'Help'
   content: Content
   sidebar_first: 'Sidebar first'
   footer: Footer
