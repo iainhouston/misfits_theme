@@ -1,0 +1,19 @@
+{
+  "name": "iainhouston/misfits_theme",
+  "description": "Drupal 8 Theme for Misfits Theatre Company",
+  "type": "drupal-theme",
+  "extra": {
+    "installer-name": "misfitsv4"
+  },
+  "license": "GPL-2.0+",
+  "keywords": ["misfits", "php", "twig"],
+  "homepage": "https://iainhouston.com",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Iain Houston",
+      "email": "iainhouston@mac.com"
+    }
+  ],
+  "require": { }
+}
