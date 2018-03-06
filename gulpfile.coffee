@@ -19,7 +19,7 @@ gulp.task 'drushPHP', shell.task([ "drush #{drushAlias} cr" ])
 gulp.task 'drushTwig', shell.task([ "drush #{drushAlias} cache-clear theme-registry" ])
 
 gulp.task 'css', ->
-  gulp.src('css/style.css')
+  gulp.src('sourcecss/style.css')
   .pipe(postcss([
     require('postcss-import')()
     require('postcss-url')()
@@ -41,9 +41,10 @@ gulp.task 'watch-server', [
     reloadOnRestart: true
     browser: '/Applications/FirefoxDeveloperEdition.app'
   gulp.watch cssSources,    [ 'css' ]
-  gulp.watch drupalSources, [ 'drushPHP' ]
-  gulp.watch drupalSources, [ 'drushTwig' ], reload
+  gulp.watch drupalPHPSources, [ 'drushPHP' ]
+  gulp.watch drupalTemplateSources, [ 'drushTwig' ], reload
   return
 
 # Default task to be run with `gulp`
 gulp.task 'default', [ 'watch-server' ]
+return
