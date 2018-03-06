@@ -1,0 +1,5 @@
+global-css:
+  css:
+    theme:
+      vendor/css/shoelace.css: {}
+      vendor/css/responsive_menu.css: {}

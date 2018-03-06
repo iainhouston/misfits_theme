@@ -1,0 +1,23 @@
+{
+  "name": "misfitsv4",
+  "version": "1.0.0",
+  "description": "Misfits Theatre theming toolchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iainhouston/misfitsv4.git"
+  },
+  "author": "Iain Houston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iainhouston/misfitsv4/issues"
+  },
+  "homepage": "https://github.com/iainhouston/misfitsv4#readme",
+  "dependencies": {
+    "npm": "^5.7.1",
+    "shoelace-css": "^1.0.0-beta24"
+  }
+}
