@@ -25,7 +25,7 @@ gulp.task('drushPHP', shell.task(["drush " + drushAlias + " cr"]));
 gulp.task('drushTwig', shell.task(["drush " + drushAlias + " cache-clear theme-registry"]));
 
 gulp.task('css', function() {
-  gulp.src('sourcecss/style.css').pipe(postcss([require('postcss-import')(), require('postcss-url')(), require('postcss-cssnext')(), require('postcss-browser-reporter')(), require('postcss-reporter')()])).pipe(gulp.dest('./postcss')).pipe(reload({
+  return gulp.src('sourcecss/style.css').pipe(postcss([require('postcss-import')(), require('postcss-url')(), require('postcss-cssnext')(), require('postcss-browser-reporter')(), require('postcss-reporter')()])).pipe(gulp.dest('./postcss')).pipe(reload({
     stream: true
   }));
 });

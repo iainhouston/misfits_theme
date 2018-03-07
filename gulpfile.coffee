@@ -19,7 +19,7 @@ gulp.task 'drushPHP', shell.task([ "drush #{drushAlias} cr" ])
 gulp.task 'drushTwig', shell.task([ "drush #{drushAlias} cache-clear theme-registry" ])
 
 gulp.task 'css', ->
-  gulp.src('sourcecss/style.css')
+  return gulp.src('sourcecss/style.css')
   .pipe(postcss([
     require('postcss-import')()
     require('postcss-url')()
@@ -29,7 +29,6 @@ gulp.task 'css', ->
   ]))
   .pipe(gulp.dest('./postcss'))
   .pipe reload(stream: true)
-  return
 
 gulp.task 'watch-server', [
   'css'
