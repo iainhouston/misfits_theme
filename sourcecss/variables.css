@@ -13,7 +13,6 @@
   --color-white: white;
   --color-navy: #001f3f;
   --color-blue: #0074d9;
-  --color-blue-misfits: #00aeef;
   --color-aqua: #7fdbff;
   --color-teal: #39cccc;
   --color-olive: #3d9970;
@@ -28,6 +27,14 @@
   --color-black: #111;
   --color-gray: #aaa;
   --color-silver: #ddd;
+
+  --colour-misfits-blue: #00aeef;
+  --colour-misfits-dark-grey: #808080;
+  --colour-misfits-grey: #58585A;
+  --colour-misfits-mid-grey: #686868;
+  --colour-misfits-light-grey: lightgrey;
+  --colour-misfits-lightest-grey: Whitesmoke; /* rgb(245,245,245 */
+  --colour-misfits-lightest-grey-transparent:rgba(245,245,245, 0.9);
 
   /* States */
   --state-primary: var(--color-blue);
@@ -165,7 +172,7 @@
   --button-loader-border-width: .15em;
 
   /* Default */
-  --button-color: var(--color-white);
+  --button-color: var(--colour-misfits-light-grey);
   --button-bg-color: var(--state-primary);
 
   /* Secondary */
@@ -201,8 +208,8 @@
   *************************************************************************************************/
 
   --body-bg-color: var(--color-white);
-  --body-color: var(--color-black);
-  --body-color-muted: var(--color-gray);
+  --body-color: var(--colour-misfits-dark-grey);
+  --body-color-muted: var(--colour-misfits-light-grey);
 
   --font-family: var(--font-system);
   --font-size: 1rem; /* Most browsers use a default font size of 16px */
@@ -236,7 +243,7 @@
   --menu-font-weight: var(--font-weight-light);
   --menu-line-height: 1;
   --menu-margin-bottom: .5rem;
-  --menu-color: var( --color-blue-misfits);
+  --menu-color: var( --colour-misfits-blue);
   --menu-font-size: 1rem;
 
   --hr-border-width: 1px;
@@ -320,7 +327,8 @@
   --input-font-size: 1rem;
   --input-font-size-lg: 1.25rem;
   --input-font-size-xl: 1.5rem;
-  --input-font-family: inherit;
+  /* --input-font-family: inherit; */
+  --input-font-family: stamPeteRegular;
   --input-font-weight: inherit;
   --input-color: var(--body-color);
   --input-border-color: var(--component-border-color);

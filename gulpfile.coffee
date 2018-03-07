@@ -47,4 +47,3 @@ gulp.task 'watch-server', [
 
 # Default task to be run with `gulp`
 gulp.task 'default', [ 'watch-server' ]
-return

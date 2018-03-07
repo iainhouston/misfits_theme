@@ -42,5 +42,3 @@ gulp.task('watch-server', ['css', 'drushPHP', 'drushTwig'], function() {
 });
 
 gulp.task('default', ['watch-server']);
-
-return;

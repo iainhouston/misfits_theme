@@ -399,7 +399,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
-  color: #111;
+  color: #808080;
   line-height: 1.5;
 }
 a {
@@ -550,16 +550,16 @@ ol ol,
 * Placeholders
 ***************************************************************************************************/
 ::-webkit-input-placeholder {
-  color: #aaa;
+  color: lightgrey;
 }
 :-ms-input-placeholder {
-  color: #aaa;
+  color: lightgrey;
 }
 ::-ms-input-placeholder {
-  color: #aaa;
+  color: lightgrey;
 }
 ::placeholder {
-  color: #aaa;
+  color: lightgrey;
 }
 /***************************************************************************************************
 * Selections
@@ -612,6 +612,7 @@ html.mm-opened .mm-page {
   padding: 0;
   list-style: none;
   width: 100%;
+  background-color: rgba(245, 245, 245, .9);
 }
 .horizontal-menu > li {
   display: inline-block;
@@ -649,6 +650,7 @@ html.mm-opened .mm-page {
 .horizontal-menu li.sfHover > ul,
 .horizontal-menu li:hover > ul {
   display: block;
+  background: rgba(245, 245, 245, .9);
 }
 .horizontal-menu li li {
   position: relative;
@@ -767,6 +769,473 @@ ul.menu.mm-listview a.is-active {
 .mm-panel a:hover {
   border: none;
 }
+/*! Buttons */
+button,
+.button {
+  font-family: stamPeteRegular;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: lightgrey;
+  background-color: #0074d9;
+  border-radius: .25rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0074d9;
+  border-top-color: rgb(25, 130, 221);
+  border-bottom-color: rgb(0, 104, 195);
+  height: 36px;
+  height: 2.25rem;
+  line-height: calc(2.25rem - 2px);
+  letter-spacing: 1.25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 0 .75em; /* ems for relative sizing */
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: .1s all;
+  transition: .1s all
+}
+button:hover, .button:hover {
+  color: lightgrey;
+  text-decoration: none;
+  background-color: rgb(0, 104, 195);
+  border-color: rgb(0, 104, 195);
+  border-top-color: rgb(0, 116, 217);
+  border-bottom-color: rgb(0, 93, 174);
+}
+button:active,
+  button.active,
+  .button:active,
+  .button.active {
+  background-color: rgb(0, 104, 195);
+  border-color: rgb(0, 104, 195);
+  border-top-color: rgb(0, 93, 174);
+  border-bottom-color: rgb(0, 104, 195);
+}
+button:focus, .button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 116, 217, 0.5);
+          box-shadow: 0 0 0 2px rgba(0, 116, 217, 0.5);
+}
+button:disabled,
+  button.disabled,
+  .button:disabled,
+  .button.disabled {
+  background-color: rgb(0, 104, 195);
+  border-top-color: rgb(25, 130, 221);
+  border-bottom-color: rgb(0, 104, 195);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+  opacity: .5;
+  cursor: not-allowed;
+}
+button,
+.button {
+  /*Sizes */
+}
+button.button-xs, .button.button-xs {
+  font-size: 10px;
+  font-size: .625rem;
+  height: 20px;
+  height: 1.25rem;
+  line-height: calc(1.25rem - 2px);
+}
+button.button-sm, .button.button-sm {
+  font-size: 14px;
+  font-size: .875rem;
+  height: 28px;
+  height: 1.75rem;
+  line-height: calc(1.75rem - 2px);
+}
+button.button-lg, .button.button-lg {
+  font-size: 20px;
+  font-size: 1.25rem;
+  height: 44px;
+  height: 2.75rem;
+  line-height: calc(2.75rem - 2px);
+}
+button.button-xl, .button.button-xl {
+  font-size: 24px;
+  font-size: 1.5rem;
+  height: 52px;
+  height: 3.25rem;
+  line-height: calc(3.25rem - 2px);
+}
+button,
+.button {
+  /*Variations */
+}
+button.button-secondary, .button.button-secondary {
+  color: white;
+  background-color: #aaa;
+  border-color: #aaa;
+  border-top-color: rgb(179, 179, 179);
+  border-bottom-color: rgb(153, 153, 153);
+}
+button.button-secondary:hover, .button.button-secondary:hover {
+  color: white;
+  background-color: rgb(153, 153, 153);
+  border-color: rgb(153, 153, 153);
+  border-top-color: rgb(170, 170, 170);
+  border-bottom-color: rgb(136, 136, 136);
+}
+button.button-secondary:active,
+    button.button-secondary.active,
+    .button.button-secondary:active,
+    .button.button-secondary.active {
+  background-color: rgb(153, 153, 153);
+  border-color: rgb(153, 153, 153);
+  border-top-color: rgb(136, 136, 136);
+  border-bottom-color: rgb(153, 153, 153);
+}
+button.button-secondary:focus, .button.button-secondary:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.5);
+          box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.5);
+}
+button.button-secondary:disabled,
+    button.button-secondary.disabled,
+    .button.button-secondary:disabled,
+    .button.button-secondary.disabled {
+  background-color: rgb(153, 153, 153);
+  border-top-color: rgb(179, 179, 179);
+  border-bottom-color: rgb(153, 153, 153);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-success, .button.button-success {
+  color: white;
+  background-color: #2ecc40;
+  border-color: #2ecc40;
+  border-top-color: rgb(67, 209, 83);
+  border-bottom-color: rgb(41, 184, 58);
+}
+button.button-success:hover, .button.button-success:hover {
+  color: white;
+  background-color: rgb(41, 184, 58);
+  border-color: rgb(41, 184, 58);
+  border-top-color: rgb(46, 204, 64);
+  border-bottom-color: rgb(37, 163, 51);
+}
+button.button-success:active,
+    button.button-success.active,
+    .button.button-success:active,
+    .button.button-success.active {
+  background-color: rgb(41, 184, 58);
+  border-color: rgb(41, 184, 58);
+  border-top-color: rgb(37, 163, 51);
+  border-bottom-color: rgb(41, 184, 58);
+}
+button.button-success:focus, .button.button-success:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 204, 64, 0.5);
+          box-shadow: 0 0 0 2px rgba(46, 204, 64, 0.5);
+}
+button.button-success:disabled,
+    button.button-success.disabled,
+    .button.button-success:disabled,
+    .button.button-success.disabled {
+  background-color: rgb(41, 184, 58);
+  border-top-color: rgb(67, 209, 83);
+  border-bottom-color: rgb(41, 184, 58);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-info, .button.button-info {
+  color: white;
+  background-color: #39cccc;
+  border-color: #39cccc;
+  border-top-color: rgb(77, 209, 209);
+  border-bottom-color: rgb(51, 184, 184);
+}
+button.button-info:hover, .button.button-info:hover {
+  color: white;
+  background-color: rgb(51, 184, 184);
+  border-color: rgb(51, 184, 184);
+  border-top-color: rgb(57, 204, 204);
+  border-bottom-color: rgb(46, 163, 163);
+}
+button.button-info:active,
+    button.button-info.active,
+    .button.button-info:active,
+    .button.button-info.active {
+  background-color: rgb(51, 184, 184);
+  border-color: rgb(51, 184, 184);
+  border-top-color: rgb(46, 163, 163);
+  border-bottom-color: rgb(51, 184, 184);
+}
+button.button-info:focus, .button.button-info:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(57, 204, 204, 0.5);
+          box-shadow: 0 0 0 2px rgba(57, 204, 204, 0.5);
+}
+button.button-info:disabled,
+    button.button-info.disabled,
+    .button.button-info:disabled,
+    .button.button-info.disabled {
+  background-color: rgb(51, 184, 184);
+  border-top-color: rgb(77, 209, 209);
+  border-bottom-color: rgb(51, 184, 184);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-warning, .button.button-warning {
+  color: white;
+  background-color: #ff851b;
+  border-color: #ff851b;
+  border-top-color: rgb(255, 145, 50);
+  border-bottom-color: rgb(230, 120, 24);
+}
+button.button-warning:hover, .button.button-warning:hover {
+  color: white;
+  background-color: rgb(230, 120, 24);
+  border-color: rgb(230, 120, 24);
+  border-top-color: rgb(255, 133, 27);
+  border-bottom-color: rgb(204, 106, 22);
+}
+button.button-warning:active,
+    button.button-warning.active,
+    .button.button-warning:active,
+    .button.button-warning.active {
+  background-color: rgb(230, 120, 24);
+  border-color: rgb(230, 120, 24);
+  border-top-color: rgb(204, 106, 22);
+  border-bottom-color: rgb(230, 120, 24);
+}
+button.button-warning:focus, .button.button-warning:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 133, 27, 0.5);
+          box-shadow: 0 0 0 2px rgba(255, 133, 27, 0.5);
+}
+button.button-warning:disabled,
+    button.button-warning.disabled,
+    .button.button-warning:disabled,
+    .button.button-warning.disabled {
+  background-color: rgb(230, 120, 24);
+  border-top-color: rgb(255, 145, 50);
+  border-bottom-color: rgb(230, 120, 24);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-danger, .button.button-danger {
+  color: white;
+  background-color: #ff4136;
+  border-color: #ff4136;
+  border-top-color: rgb(255, 84, 74);
+  border-bottom-color: rgb(230, 59, 49);
+}
+button.button-danger:hover, .button.button-danger:hover {
+  color: white;
+  background-color: rgb(230, 59, 49);
+  border-color: rgb(230, 59, 49);
+  border-top-color: rgb(255, 65, 54);
+  border-bottom-color: rgb(204, 52, 43);
+}
+button.button-danger:active,
+    button.button-danger.active,
+    .button.button-danger:active,
+    .button.button-danger.active {
+  background-color: rgb(230, 59, 49);
+  border-color: rgb(230, 59, 49);
+  border-top-color: rgb(204, 52, 43);
+  border-bottom-color: rgb(230, 59, 49);
+}
+button.button-danger:focus, .button.button-danger:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 65, 54, 0.5);
+          box-shadow: 0 0 0 2px rgba(255, 65, 54, 0.5);
+}
+button.button-danger:disabled,
+    button.button-danger.disabled,
+    .button.button-danger:disabled,
+    .button.button-danger.disabled {
+  background-color: rgb(230, 59, 49);
+  border-top-color: rgb(255, 84, 74);
+  border-bottom-color: rgb(230, 59, 49);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-light, .button.button-light {
+  color: #111;
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(230, 230, 230);
+  border-top-color: rgb(233, 233, 233);
+  border-bottom-color: rgb(207, 207, 207);
+}
+button.button-light:hover, .button.button-light:hover {
+  color: #111;
+  background-color: rgb(207, 207, 207);
+  border-color: rgb(207, 207, 207);
+  border-top-color: rgb(230, 230, 230);
+  border-bottom-color: rgb(184, 184, 184);
+}
+button.button-light:active,
+    button.button-light.active,
+    .button.button-light:active,
+    .button.button-light.active {
+  background-color: rgb(207, 207, 207);
+  border-color: rgb(207, 207, 207);
+  border-top-color: rgb(184, 184, 184);
+  border-bottom-color: rgb(207, 207, 207);
+}
+button.button-light:focus, .button.button-light:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(230, 230, 230, 0.5);
+          box-shadow: 0 0 0 2px rgba(230, 230, 230, 0.5);
+}
+button.button-light:disabled,
+    button.button-light.disabled,
+    .button.button-light:disabled,
+    .button.button-light.disabled {
+  background-color: rgb(207, 207, 207);
+  border-top-color: rgb(233, 233, 233);
+  border-bottom-color: rgb(207, 207, 207);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-dark, .button.button-dark {
+  color: white;
+  background-color: rgb(41, 41, 41);
+  border-color: rgb(41, 41, 41);
+  border-top-color: rgb(62, 62, 62);
+  border-bottom-color: rgb(37, 37, 37);
+}
+button.button-dark:hover, .button.button-dark:hover {
+  color: white;
+  background-color: rgb(37, 37, 37);
+  border-color: rgb(37, 37, 37);
+  border-top-color: rgb(41, 41, 41);
+  border-bottom-color: rgb(33, 33, 33);
+}
+button.button-dark:active,
+    button.button-dark.active,
+    .button.button-dark:active,
+    .button.button-dark.active {
+  background-color: rgb(37, 37, 37);
+  border-color: rgb(37, 37, 37);
+  border-top-color: rgb(33, 33, 33);
+  border-bottom-color: rgb(37, 37, 37);
+}
+button.button-dark:focus, .button.button-dark:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px rgba(41, 41, 41, 0.5);
+          box-shadow: 0 0 0 2px rgba(41, 41, 41, 0.5);
+}
+button.button-dark:disabled,
+    button.button-dark.disabled,
+    .button.button-dark:disabled,
+    .button.button-dark.disabled {
+  background-color: rgb(37, 37, 37);
+  border-top-color: rgb(62, 62, 62);
+  border-bottom-color: rgb(37, 37, 37);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button,
+.button {
+  /*Block buttons */
+}
+button.button-block, .button.button-block {
+  width: 100% !important;
+  display: block;
+}
+button,
+.button {
+  /*Link buttons */
+}
+button.button-link, .button.button-link {
+  border-color: transparent;
+  background-color: transparent;
+  color: #0074d9;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+button.button-link:hover,
+  button.button-link:focus,
+  .button.button-link:hover,
+  .button.button-link:focus {
+  border-color: transparent;
+  background-color: transparent;
+  color: #0074d9;
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/* Loader buttons */
+.button-loader,
+.button-loader:hover {
+  position: relative;
+  min-width: 2em;
+  color: transparent !important;
+  overflow: hidden;
+}
+.button-loader::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: calc(50% - 0.5em);
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: solid .15em rgba(211, 211, 211, 0.2);
+  border-top-color: lightgrey;
+  border-left-color: lightgrey;
+  display: inline-block;
+  -webkit-animation: button-loader 750ms linear infinite;
+          animation: button-loader 750ms linear infinite;
+}
+.button-secondary.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+.button-success.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+.button-info.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+.button-warning.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+.button-danger.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+.button-light.button-loader::after {
+  border-color: rgba(17, 17, 17, 0.2);
+  border-top-color: #111;
+  border-left-color: #111;
+}
+.button-dark.button-loader::after {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-left-color: white;
+}
+@-webkit-keyframes button-loader {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes button-loader {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
 :root {
   /*************************************************************************************************
   * Core variables
@@ -774,7 +1243,7 @@ ul.menu.mm-listview a.is-active {
 
   /* Fonts */
 
-  /* Colors (most courtesy of http://clrs.cc/) */
+  /* Colors (most courtesy of http://clrs.cc/) */ /* rgb(245,245,245 */
 
   /* States */
 
@@ -853,6 +1322,7 @@ ul.menu.mm-listview a.is-active {
   /*************************************************************************************************
   * Forms
   *************************************************************************************************/
+  /* --input-font-family: inherit; */
 
   /*************************************************************************************************
   * Grid
