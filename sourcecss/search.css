@@ -1,0 +1,28 @@
+div#block-searchform {
+  background-color: var(--colour-misfits-lightest-grey-transparent);
+  padding-top: 8px;
+  & form {
+    display: flex;
+    background-color: var(--colour-misfits-lightest-grey-transparent);
+  }
+  & .button.form-submit {
+    display: block;
+    background: url(../icons/loupe.svg) no-repeat center;
+    cursor: pointer;
+    height: 30px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    direction: ltr;
+    width: 34px;
+    min-width: 34px;
+    border: none;
+  }
+  & .button.form-submit:hover,
+  & .form-submit:hover,
+  & .button.form-submit:focus,
+  & .form-submit:focus {
+    background: url(../icons/loupe2.svg) no-repeat center;
+  }
+}

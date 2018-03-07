@@ -31,6 +31,15 @@ html.mm-opened .mm-page {
   padding-left: 15rem;
 }
 
+#block-horizontalmenu {
+  display: block ;
+  width: 100%;
+  & ul.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .horizontal-menu {
   position: relative;
   margin-top: 0;
@@ -46,6 +55,7 @@ html.mm-opened .mm-page {
 .horizontal-menu > li {
   display: inline-block;
   position: relative;
+  padding-right: 2rem;
 }
 
 .horizontal-menu > li ul ul {
@@ -136,9 +146,7 @@ html.mm-opened .mm-page {
 .responsive-menu-toggle-icon span.label {
   display: block;
   position: absolute;
-  /* font-size: 17px; */
-  /* text-transform: uppercase; */
-  top: 2px;
+  top: 12px;
   left: 40px;
 }
 

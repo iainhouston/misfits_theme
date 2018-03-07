@@ -1,0 +1,4 @@
+div.region_primary_menu {
+  display: flex;
+	justify-content: space-between;
+}

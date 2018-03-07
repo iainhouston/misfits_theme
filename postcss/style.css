@@ -574,14 +574,44 @@ ol ol,
   color: white;
   text-shadow: none !important;
 }
+div#block-searchform {
+  background-color: rgba(245, 245, 245, .9);
+  padding-top: 8px
+}
+div#block-searchform form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(245, 245, 245, .9);
+}
+div#block-searchform .button.form-submit {
+  display: block;
+  background: url(../icons/loupe.svg) no-repeat center;
+  cursor: pointer;
+  height: 30px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -9999px;
+  direction: ltr;
+  width: 34px;
+  min-width: 34px;
+  border: none;
+}
+div#block-searchform .button.form-submit:hover,
+  div#block-searchform .form-submit:hover,
+  div#block-searchform .button.form-submit:focus,
+  div#block-searchform .form-submit:focus {
+  background: url(../icons/loupe2.svg) no-repeat center;
+}
 .responsive-menu-block-wrapper {
   display: none;
 }
 .responsive-menu-block-wrapper, .responsive-menu-toggle-icon span.label, div.mm-panels  {
   font-family: stamPeteRegular;
   font-weight: 300;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1;
   color: #00aeef;
 }
@@ -603,6 +633,18 @@ html.mm-opened .mm-page {
   padding-left: 240px;
   padding-left: 15rem;
 }
+#block-horizontalmenu {
+  display: block ;
+  width: 100%
+}
+#block-horizontalmenu ul.horizontal-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .horizontal-menu {
   position: relative;
   margin-top: 0;
@@ -617,6 +659,8 @@ html.mm-opened .mm-page {
 .horizontal-menu > li {
   display: inline-block;
   position: relative;
+  padding-right: 32px;
+  padding-right: 2rem;
 }
 .horizontal-menu > li ul ul {
   left: 13.75em;
@@ -695,9 +739,7 @@ html.mm-opened .mm-page {
 .responsive-menu-toggle-icon span.label {
   display: block;
   position: absolute;
-  /* font-size: 17px; */
-  /* text-transform: uppercase; */
-  top: 2px;
+  top: 12px;
   left: 40px;
 }
 .responsive-menu-toggle-icon:before,
@@ -1235,6 +1277,14 @@ button.button-link:hover,
 @keyframes button-loader {
   0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+div.region_primary_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 :root {
   /*************************************************************************************************
