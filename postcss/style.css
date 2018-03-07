@@ -745,7 +745,7 @@ html.mm-opened .mm-page {
 .responsive-menu-toggle-icon:before,
 .responsive-menu-toggle-icon:after,
 .responsive-menu-toggle-icon span.icon {
-  background: #fff;
+  background: #00aeef;
   content: '';
   display: block;
   width: 20px;
@@ -756,13 +756,13 @@ html.mm-opened .mm-page {
   border-radius: 2px;
 }
 .responsive-menu-toggle-icon:before {
-  top: 8px;
+  top: 13px;
 }
 .responsive-menu-toggle-icon span.icon {
-  top: 14px;
+  top: 19px;
 }
 .responsive-menu-toggle-icon:after {
-  top: 20px;
+  top: 25px;
 }
 .responsive-menu-toggle-icon:before,
 .responsive-menu-toggle-icon:after,
