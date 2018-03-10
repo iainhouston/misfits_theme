@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Prepares variables for views fields templates.
+ *
+ * Default template: views-view-fields.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - view: The view object.
+ *   - options: An array of options. Each option contains:
+ *     - inline: An array that contains the fields that are to be
+ *       displayed inline.
+ *     - default_field_elements: If default field wrapper
+ *       elements are to be provided.
+ *     - hide_empty: Whether the field is to be hidden if empty.
+ *     - element_default_classes: If the default classes are to be added.
+ *     - separator: A string to be placed between inline fields to keep them
+ *       visually distinct.
+ *    - row: An array containing information about the current row.
+ */
+function misfitsv4_preprocess_views_view_fields(&$variables) {
+  $view = $variables['view'];
+  $fields = $variables['fields'];
+  if (count($fields['field_video']->content) >256) {
+    unset($variables['fields']['field_photo_gallery']);
+    unset($variables['fields']['field_image']);
+  }
+  if (isset($variables['fields']['field_photo_gallery'])) {
+      unset($variables['fields']['field_image']);
+  }
+
+
+}

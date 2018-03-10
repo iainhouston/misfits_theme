@@ -6,7 +6,7 @@ test_site_name = 'vagrant.misfitstheatre.test';
 
 cssSources = ['sourcecss/**/*.css'];
 
-drupalPHPSources = ['**/*.{php,inc}'];
+drupalPHPSources = ['**/*.{php,inc,theme}'];
 
 drupalTemplateSources = ['**/*.html.twig'];
 
