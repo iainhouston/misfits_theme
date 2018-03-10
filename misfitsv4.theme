@@ -22,7 +22,10 @@
 function misfitsv4_preprocess_views_view_fields(&$variables) {
   $view = $variables['view'];
   $fields = $variables['fields'];
-  if (count($fields['field_video']->content) >256) {
+  // Seemingly a bug in views where a field is not being hidden when no results
+  if (
+    isset($variables['fields']['field_video']) &&
+    count($fields['field_video']->content) > 256) {
     unset($variables['fields']['field_photo_gallery']);
     unset($variables['fields']['field_image']);
   }
