@@ -1,5 +1,5 @@
 (($, Drupal) ->
-  Drupal.behaviors.misfitsv4ThumbScrubber = attach: (context, settings) ->
+  Drupal.behaviors.misfitsv4ThumScrubber = attach: (context, settings) ->
     $('div.thumbscrubber', context).once('init').each ->
       x = undefined
       ts_prevslide = undefined
