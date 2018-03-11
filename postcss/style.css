@@ -1286,6 +1286,31 @@ div.region_primary_menu {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
+.thumbscrubber {
+    height: 100%;
+    position: relative;
+    width: 220px;
+    margin: 0 auto 124px auto;
+    display: block;
+}
+.thumbscrubber .ts-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.thumbscrubber .ts-inner > * {
+    display:block;
+    opacity: 0;
+    position: absolute;
+}
+.thumbscrubber .ts-inner .ts-currslide {
+    opacity: 1;
+}
+.thumbscrubber.smooth .ts-inner > * {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
 :root {
   /*************************************************************************************************
   * Core variables
