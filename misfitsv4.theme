@@ -20,7 +20,7 @@
  *    - row: An array containing information about the current row.
  */
 function misfitsv4_preprocess_views_view_fields(&$variables) {
-  $view = $variables['view'];
+
   $fields = $variables['fields'];
   // Seemingly a bug in views where a field is not being hidden when no results
   if (
@@ -32,6 +32,5 @@ function misfitsv4_preprocess_views_view_fields(&$variables) {
   if (isset($variables['fields']['field_photo_gallery'])) {
       unset($variables['fields']['field_image']);
   }
-
 
 }

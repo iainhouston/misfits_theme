@@ -1,4 +1,9 @@
-global-css:
+global:
   css:
     theme:
       postcss/style.css: {}
+  js:
+    scripts/misfitsv4.js: { }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
