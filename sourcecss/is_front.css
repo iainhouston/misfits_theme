@@ -1,0 +1,30 @@
+div.is_front {
+    & .views-element-container > div {
+          margin: var(--front-views-element-container-top-margin) 1rem var(--front-views-element-container-bottom-margin) 1rem;
+          max-height: 70%;
+          display: grid;
+          grid-template-rows: auto;
+          grid-gap: 0.5rem;
+          align-items: center;
+          justify-items: left;
+          grid-template-columns: 20% 1fr 40px;
+          grid-template-areas:
+            "logo content . "
+            ".    content . "
+            ".    .       . ";
+      }
+    & header {
+        grid-area: logo;
+        & > img {
+            max-height: 60vh;
+        }
+    }
+    & .front_page_content {
+          grid-area: content;
+      }
+    & .front-row {
+        display: flex;
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+}

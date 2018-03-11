@@ -1311,6 +1311,41 @@ div.region_primary_menu {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
+div.is_front .views-element-container > div {
+  margin: 64px 16px 64px 16px;
+  margin: 4rem 1rem 4rem 1rem;
+  max-height: 70%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: left;
+  grid-template-columns: 20% 1fr 40px;
+  grid-template-areas:
+            "logo content . "
+            ".    content . "
+            ".    .       . ";
+}
+div.is_front header {
+  grid-area: logo;
+}
+div.is_front header > img {
+  max-height: 60vh;
+}
+div.is_front .front_page_content {
+  grid-area: content;
+}
+div.is_front .front-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-top: 16px;
+  padding-top: 1rem;
+}
 :root {
   /*************************************************************************************************
   * Core variables

@@ -278,6 +278,9 @@
   --selection-color: var(--color-white);
   --selection-bg-color: var(--state-primary);
 
+  --front-views-element-container-top-margin: 4rem;
+  --front-views-element-container-bottom-margin: 4rem;
+
   /*************************************************************************************************
   * Dropdowns
   *************************************************************************************************/
