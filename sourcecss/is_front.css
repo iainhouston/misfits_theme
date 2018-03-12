@@ -19,7 +19,15 @@ div.is_front {
             max-height: 60vh;
         }
     }
-
+    & main {
+      position: relative;
+      height: 90vh;
+    }
+    & .layout-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     & .front_page_content {
           grid-area: content;
       }
@@ -50,7 +58,7 @@ div.is_front {
         display: none;
     }
   }
-@media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
+@media screen and (--exceeds-iPhone-6s-Landscape-height) {
   div.is_front {
     & main {
       position: relative;
@@ -59,6 +67,19 @@ div.is_front {
     & .layout-content {
       position: absolute;
       top: 10vh;
+      left: 0;
+    }
+  }
+}
+@media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
+  div.is_front {
+    & main {
+      position: relative;
+      height: 90vh;
+    }
+    & .layout-content {
+      position: absolute;
+      top: 5vh;
       left: 10vw;
     }
     & .front-row {

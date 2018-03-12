@@ -604,6 +604,7 @@
 @custom-media --within-iPad-Portrait-width (max-width: 768px);
 @custom-media --exceeds-iPhone-6s-Portrait-width (min-width: 376px);
 @custom-media --exceeds-iPhone-6s-Landscape-width (min-width: 668px);
+@custom-media --exceeds-iPhone-6s-Landscape-height (min-height: 376px);
 @custom-media --exceeds-Laptop-width (min-width: 1281px);
 @custom-media --sufficient-front-row-height (min-height: 654px);
 @custom-media --sufficient-slider-height (min-height: 1120px);
