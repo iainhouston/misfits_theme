@@ -408,7 +408,6 @@ body, html {
 }
 #page {
   max-width: 1024px;
-  margin: auto;
 }
 a {
   color: #0074d9;
@@ -1377,14 +1376,23 @@ div.is_front .front-row video,
   display: none;
 }
 @media screen and (min-width: 668px) and (min-height: 654px)  {
+  div.is_front main {
+    position: relative;
+    height: 90vh;
+  }
+  div.is_front .layout-content {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+  }
   div.is_front .front-row {
     height: 180px;
     max-width: 50rem;
   }
   div.is_front .front-media.thumbscrubber,
-        div.is_front .front-row video,
-        div.is_front .front-media img,
-        div.is_front .front-media {
+    div.is_front .front-row video,
+    div.is_front .front-media img,
+    div.is_front .front-media {
     width: 220px;
   }
   div.is_front .front-text > p {
@@ -1393,12 +1401,11 @@ div.is_front .front-row video,
     overflow: hidden;
   }
   div.is_front .front-media.thumbscrubber,
-        div.is_front .front-row video,
-        div.is_front .front-media img {
+    div.is_front .front-row video,
+    div.is_front .front-media img {
     display: block;
     width: 220px;
   }
-
 }
 :root {
   /*************************************************************************************************
