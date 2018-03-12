@@ -32,6 +32,15 @@ body {
   color: var(--body-color);
   line-height: var(--line-height);
 }
+body, html {
+  height: 100%;
+  display: grid;
+}
+
+#page {
+  max-width: 1024px;
+  margin: auto;
+}
 
 a {
   color: var(--link-color);

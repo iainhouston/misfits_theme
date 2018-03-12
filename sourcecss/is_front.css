@@ -32,10 +32,18 @@ div.is_front {
         color: var(--misfits-logo-blue);
         margin-top: 0;
     }
+    & .front-text {
+      flex: 1;
+    }
+    & .front-media.thumbscrubber,
+    & .front-row video,
+    & .front-media img  {
+      width: 0;
+    }
     & .front-text > h3 {
         padding-left: 2rem;
     }
-    & .front-media video,
+    & .front-row video,
     & .front-text > p,
     & .front-media img {
         display: none;
@@ -47,6 +55,9 @@ div.is_front {
             height: var(--front-row-height);
             max-width: 50rem;
         }
+        & .front-media.thumbscrubber,
+        & .front-row video,
+        & .front-media img ,
         & .front-media {
           width: 220px;
         }
@@ -56,7 +67,7 @@ div.is_front {
             overflow: hidden;
         }
         & .front-media.thumbscrubber,
-        & .front-media video,
+        & .front-row video,
         & .front-media img {
             display: block;
             width: 220px;
