@@ -1,14 +1,10 @@
 .thumbscrubber {
-    height: 100%;
-    position: relative;
     width: 220px;
-    margin: 0 auto 124px auto;
     display: block;
 }
 .thumbscrubber .ts-inner {
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: 1;
 }
 .thumbscrubber .ts-inner > * {

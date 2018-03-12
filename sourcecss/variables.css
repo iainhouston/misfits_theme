@@ -561,6 +561,22 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 2.5rem;
+
+  /* TODO: Iain: Harmonise with Shoelace*/
+  --misfits-logo-grey: rgb(88, 88, 90);
+  --misfits-light-grey: rgb(230, 230, 230);
+  --misfits-light-grey-transparent: rgba(230, 230, 230, 0.85);
+  --misfits-logo-blue: rgb(0, 137, 188);
+
+  --layout-container-top-margin: 4rem;
+  --layout-container-bottom-margin: 4rem;
+  --content-width: 60rem;
+  --max-para-width: 40rem;
+  --front-row-height: 180px;
+  --front-row-img-width: 220px;
+
+  --total_animation_time: 20s;
+
 }
 
 /* Core breakpoints */
@@ -581,3 +597,13 @@
 @custom-media --breakpoint-md-only only screen and (min-width: 768px) and (max-width: 991px);
 @custom-media --breakpoint-lg-only only screen and (min-width: 992px) and (max-width: 1199px);
 @custom-media --breakpoint-xl-only only screen and (min-width: 1200px);
+
+/* TODO: Iain: Harmonise with Shoelace*/
+@custom-media --exceeds-iPad-Landscape-width (min-width: 1025px);
+@custom-media --exceeds-iPad-Portrait-width (min-width: 769px);
+@custom-media --within-iPad-Portrait-width (max-width: 768px);
+@custom-media --exceeds-iPhone-6s-Portrait-width (min-width: 376px);
+@custom-media --exceeds-iPhone-6s-Landscape-width (min-width: 668px);
+@custom-media --exceeds-Laptop-width (min-width: 1281px);
+@custom-media --sufficient-front-row-height (min-height: 654px);
+@custom-media --sufficient-slider-height (min-height: 1120px);

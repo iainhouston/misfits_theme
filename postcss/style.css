@@ -1287,16 +1287,12 @@ div.region_primary_menu {
 	        justify-content: space-between;
 }
 .thumbscrubber {
-    height: 100%;
-    position: relative;
     width: 220px;
-    margin: 0 auto 124px auto;
     display: block;
 }
 .thumbscrubber .ts-inner {
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: 1;
 }
 .thumbscrubber .ts-inner > * {
@@ -1345,6 +1341,43 @@ div.is_front .front-row {
   padding-left: 2rem;
   padding-top: 16px;
   padding-top: 1rem;
+}
+div.is_front {
+  & .front-row h3, .slide_title {
+        font-family: stamPeteRegular;
+        color: rgb(0, 137, 188);
+        margin-top: 0;
+  }
+}
+div.is_front .front-text > h3 {
+  padding-left: 32px;
+  padding-left: 2rem;
+}
+div.is_front .front-media video,
+    div.is_front .front-text > p,
+    div.is_front .front-media img {
+  display: none;
+}
+@media screen and (min-width: 668px) and (min-height: 654px)  {
+  div.is_front .front-row {
+    height: 180px;
+    max-width: 50rem;
+  }
+  div.is_front .front-media {
+    width: 220px;
+  }
+  div.is_front .front-text > p {
+    padding-left: 2rem;
+    display: block;
+    overflow: hidden;
+  }
+  div.is_front .front-media.thumbscrubber,
+        div.is_front .front-media video,
+        div.is_front .front-media img {
+    display: block;
+    width: 220px;
+  }
+
 }
 :root {
   /*************************************************************************************************
@@ -1493,5 +1526,9 @@ div.is_front .front-row {
   /*************************************************************************************************
   * Utilities
   *************************************************************************************************/
+
+  /* TODO: Iain: Harmonise with Shoelace*/
+
 }
 /* Core breakpoints */
+/* TODO: Iain: Harmonise with Shoelace*/
