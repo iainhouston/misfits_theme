@@ -18,7 +18,7 @@
   "homepage": "https://github.com/iainhouston/misfitsv4#readme",
   "dependencies": {
     "npm": "^5.7.1",
-    "shoelace-css": "^1.0.0-beta24"
+    "shoelace-css": "^1.0.0-beta9"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
