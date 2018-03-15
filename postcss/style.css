@@ -1427,6 +1427,61 @@ div.is_front .front-row video,
     width: 220px;
   }
 }
+/*! Tabs */
+#block-misfitsv4-local-tasks > .tabs {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav a {
+  color: #0074d9;
+  text-decoration: none;
+  background-color: white;
+  border-radius: .25rem;
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  -webkit-transition: .1s box-shadow;
+  transition: .1s box-shadow;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav a:hover {
+  color: #0074d9;
+  background-color: white;
+  text-decoration: none;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav a.active, #block-misfitsv4-local-tasks > .tabs .tabs-nav a.is_active {
+  color: white;
+  background-color: #0074d9;
+  cursor: default;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav a.disabled {
+  color: lightgrey;
+  background-color: white;
+  cursor: not-allowed;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-nav.tabs-nav-block a {
+  display: block;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-pane {
+  border: solid 1px #ddd;
+  border-radius: .25rem;
+  padding: 16px 16px;
+  padding: 1rem 1rem;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-pane:not(.active) {
+  display: none;
+}
+#block-misfitsv4-local-tasks > .tabs .tabs-pane > :last-child {
+  margin-bottom: 0;
+}
 :root {
   /*************************************************************************************************
   * Core variables

@@ -23,6 +23,7 @@ gulp.task 'css', ->
   .pipe(postcss([
     require('postcss-import')()
     require('postcss-url')()
+    require('postcss-nesting')({})
     require('postcss-cssnext')()
     require('postcss-browser-reporter')()
     require('postcss-reporter')()
@@ -39,9 +40,9 @@ gulp.task 'watch-server', [
     proxy: test_site_name
     reloadOnRestart: true
     browser: '/Applications/FirefoxDeveloperEdition.app'
-  gulp.watch cssSources,    [ 'css' ]
-  gulp.watch drupalPHPSources, [ 'drushPHP' ]
-  gulp.watch drupalTemplateSources, [ 'drushTwig' ], reload
+  gulp.watch cssSources,    [ 'css' ], reload
+  gulp.watch drupalPHPSources, reload
+  gulp.watch drupalTemplateSources, ['drushTwig'], reload
   return
 
 # Default task to be run with `gulp`

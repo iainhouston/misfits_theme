@@ -25,7 +25,7 @@ gulp.task('drushPHP', shell.task(["drush " + drushAlias + " cr"]));
 gulp.task('drushTwig', shell.task(["drush " + drushAlias + " cache-clear theme-registry"]));
 
 gulp.task('css', function() {
-  return gulp.src('sourcecss/style.css').pipe(postcss([require('postcss-import')(), require('postcss-url')(), require('postcss-cssnext')(), require('postcss-browser-reporter')(), require('postcss-reporter')()])).pipe(gulp.dest('./postcss')).pipe(reload({
+  return gulp.src('sourcecss/style.css').pipe(postcss([require('postcss-import')(), require('postcss-url')(), require('postcss-nesting')({}), require('postcss-cssnext')(), require('postcss-browser-reporter')(), require('postcss-reporter')()])).pipe(gulp.dest('./postcss')).pipe(reload({
     stream: true
   }));
 });
@@ -36,8 +36,8 @@ gulp.task('watch-server', ['css', 'drushPHP', 'drushTwig'], function() {
     reloadOnRestart: true,
     browser: '/Applications/FirefoxDeveloperEdition.app'
   });
-  gulp.watch(cssSources, ['css']);
-  gulp.watch(drupalPHPSources, ['drushPHP']);
+  gulp.watch(cssSources, ['css'], reload);
+  gulp.watch(drupalPHPSources, reload);
   gulp.watch(drupalTemplateSources, ['drushTwig'], reload);
 });
 
