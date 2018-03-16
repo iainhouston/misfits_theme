@@ -1,0 +1,35 @@
+/*
+  Header with social media links from icons
+*/
+#page > header {
+  background-color: var(--misfits-logo-grey);
+  & > .social-icons {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    & a {
+      padding: 4px;
+    }
+    & i::before {
+        transition: all 0.2s ease-in-out;
+        border-radius: 100%;
+        border: solid 1px var(--body-bg-color);
+        display: block;
+        position: relative;
+        text-align: center;
+        top: 0;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    & .fa {
+        color: WhiteSmoke;
+    }
+    & .fa-lg {
+        font-size: 1.75rem;
+        line-height: 1.25;
+    }
+  }
+}
+/*
+  End of Header
+*/

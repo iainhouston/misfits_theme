@@ -37,8 +37,23 @@ body, html {
   display: grid;
 }
 
+/* Misfits main region wrappers */
 #page {
-  max-width: 1024px;
+  & > header,
+  & .primary_menu_wrapper,
+  & main {
+    width: 100%;
+  }
+}
+
+/* Misfits region contents  */
+#page {
+  & > header .social-icons,
+  & > .primary_menu_wrapper > .region_primary_menu,
+  & > main {
+    max-width: var(--container-max-width-lg);
+    margin: 0 auto;
+  }
 }
 
 a {

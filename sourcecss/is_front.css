@@ -1,25 +1,26 @@
 div.is_front {
-    & .views-element-container > div {
-          margin: var(--front-views-element-container-top-margin) 1rem var(--front-views-element-container-bottom-margin) 1rem;
-          max-height: 70%;
-          display: grid;
-          grid-template-rows: auto;
-          grid-gap: 0.5rem;
-          align-items: center;
-          justify-items: left;
-          grid-template-columns: 20% 1fr 40px;
-          grid-template-areas:
-            "logo content . "
-            ".    content . "
-            ".    .       . ";
-      }
+  width: 100%;
+  & .views-element-container > div {
+      margin: 1rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+      max-height: 70%;
+      display: grid;
+      grid-template-rows: auto;
+      grid-gap: 0.5rem;
+      align-items: center;
+      justify-items: left;
+      grid-template-columns: 20% 1fr 40px;
+      grid-template-areas:
+        "logo content . "
+        ".    content . "
+        ".    .       . ";
+    }
     & header {
         grid-area: logo;
         & > img {
             max-height: 60vh;
         }
     }
-    & main {
+    /* & main {
       position: relative;
       height: 90vh;
     }
@@ -27,7 +28,7 @@ div.is_front {
       position: absolute;
       top: 0;
       left: 0;
-    }
+    } */
     & .front_page_content {
           grid-area: content;
       }
@@ -36,7 +37,7 @@ div.is_front {
         padding-left: 2rem;
         padding-top: 1rem;
     }
-    & .front-row h3, .slide_title {
+    & .front-row h3 {
         font-family: stamPeteRegular;
         color: var(--misfits-logo-blue);
         margin-top: 0;
@@ -58,30 +59,22 @@ div.is_front {
         display: none;
     }
   }
-@media screen and (--exceeds-iPhone-6s-Landscape-height) {
-  div.is_front {
-    & main {
-      position: relative;
-      height: 90vh;
-    }
-    & .layout-content {
-      position: absolute;
-      top: 10vh;
-      left: 0;
-    }
+  @media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
+    div.is_front {
+      & .views-element-container > div {
+          margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+        }
+      }
   }
-}
+  /* @media screen and (--exceeds-iPhone-6s-Landscape-height) {
+    div.is_front {
+      & .views-element-container > div {
+          margin: 6rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+        }
+      }
+  } */
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
-    & main {
-      position: relative;
-      height: 90vh;
-    }
-    & .layout-content {
-      position: absolute;
-      top: 5vh;
-      left: 10vw;
-    }
     & .front-row {
         height: var(--front-row-height);
         max-width: 50rem;

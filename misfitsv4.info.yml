@@ -9,7 +9,6 @@ libraries:
   - misfitsv4/global
 
 regions:
-  header: Header
   primary_menu: 'Primary menu'
   highlighted: 'Highlighted'
   help: 'Help'

@@ -44,37 +44,45 @@
   <div id="page">
 
     <header role="banner">
-      {{ page.header }}
-    </header>
-
+      <div class="social-icons">
+      <a href="https://www.facebook.com/pages/The-Misfits-Theatre-Company-CIC/183838208320670"  target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+      <a href="https://twitter.com/TheMisfitsUKCIO" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+      <a href="https://www.youtube.com/user/Misfitstheatre" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/misfits-theatre-company-uk-cio-a9940839?trk=nav_responsive_tab_profile_pic" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+      <a href="https://www.instagram.com/misfitstheatre/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+    </div>
+  </header>
+  <div class="primary_menu_wrapper">
     {{ page.primary_menu }}
-
-    {{ page.highlighted }}
-
-    {{ page.help }}
-
-    <main role="main">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      <div class="layout-content">
+  </div>
 
 
-          {{ page.content }}
-      </div>{# /.layout-content #}
+  {{ page.highlighted }}
 
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+  {{ page.help }}
 
-    </main>
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    {% if page.footer %}
-      <footer role="contentinfo">
-        {{ page.footer }}
-      </footer>
+    <div class="layout-content">
+
+
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+    <aside class="layout-sidebar-first" role="complementary">
+      {{ page.sidebar_first }}
+    </aside>
     {% endif %}
 
-    </div>{# /#page #}
-  </div>{# /#page-wrapper #}
+  </main>
+
+  {% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+  {% endif %}
+
+</div>{# /#page #}
+</div>{# /#page-wrapper #}
