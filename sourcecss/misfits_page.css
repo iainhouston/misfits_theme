@@ -19,6 +19,25 @@
   }
 }
 
-#page main {
-  padding-top: 2rem;
+div.is_not_front #page {
+  & > main {
+    padding-top: 0.5rem;
+    & > .layout-content {
+      padding: 0 0.5rem;
+    }
+  }
+  & > footer > .region_footer {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
+  div.is_not_front #page {
+    & > main,  & > footer {
+      padding-top: 2rem;
+      & > .layout-content {
+        padding: 0;
+      }
+    }
+  }
 }

@@ -615,9 +615,25 @@ ul ul {
   max-width: 960px;
   margin: 0 auto;
 }
-#page main {
-  padding-top: 32px;
-  padding-top: 2rem;
+div.is_not_front #page > main {
+  padding-top: 8px;
+  padding-top: 0.5rem;
+}
+div.is_not_front #page > main > .layout-content {
+  padding: 0 8px;
+  padding: 0 0.5rem;
+}
+div.is_not_front #page > footer > .region_footer {
+  padding: 8px;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 321px) {
+  div.is_not_front #page > main,  div.is_not_front #page > footer {
+    padding-top: 2rem;
+  }
+  div.is_not_front #page > main > .layout-content, div.is_not_front #page > footer > .layout-content {
+    padding: 0;
+  }
 }
 /*
   Header with social media links from icons
