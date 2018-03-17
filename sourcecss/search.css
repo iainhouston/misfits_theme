@@ -6,7 +6,7 @@ div#block-searchform {
     background-color: var(--colour-misfits-lightest-grey-transparent);
   }
   & #edit-keys {
-    margin: 2px;
+    margin: 1px;
   }
   & #edit-actions {
     padding-left: 0.5rem;
@@ -16,7 +16,7 @@ div#block-searchform {
     background: url(../icons/loupe.svg) no-repeat center;
     cursor: pointer;
     height: 30px;
-    margin: 2px;
+    margin: 3px;
     overflow: hidden;
     padding: 0;
     text-indent: -9999px;
