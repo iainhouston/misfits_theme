@@ -1,0 +1,20 @@
+/* Misfits main region wrappers */
+#page {
+  & > header,
+  & .primary_menu_wrapper,
+  & > main,
+  & > footer {
+    width: 100%;
+  }
+}
+
+/* Misfits region contents  */
+#page {
+  & > header .social-icons,
+  & > .primary_menu_wrapper > .region_primary_menu,
+  & > main > .layout-content,
+  & > footer > .region_footer {
+    max-width: var(--container-max-width-lg);
+    margin: 0 auto;
+  }
+}

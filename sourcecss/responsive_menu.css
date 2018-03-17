@@ -7,11 +7,11 @@
 }
 
 .responsive-menu-block-wrapper, .responsive-menu-toggle-icon span.label, div.mm-panels  {
-  font-family: var(--menu-font-family);
-  font-weight: var(--menu-font-weight);
-  font-size: var(--menu-font-size);
-  line-height: var(--menu-line-height);
-  color: var(--menu-color);
+  font-size: var(--headings-font-size-h4);
+  font-family: var(--headings-font-family);
+  font-weight: var(--headings-font-weight);
+  line-height: var(--headings-line-height);
+  color: var(--headings-color);
 }
 
 html.mm-opened .mm-page {
@@ -77,6 +77,7 @@ html.mm-opened .mm-page {
   padding-right: 1em;
   padding-bottom: 0.35em;
   padding-left: 1em;
+  color: var(--misfits-logo-blue);
 }
 
 .horizontal-menu > li ul {
@@ -152,6 +153,7 @@ html.mm-opened .mm-page {
   position: absolute;
   top: 12px;
   left: 40px;
+  color: var(--menu-color);
 }
 
 .responsive-menu-toggle-icon:before,
@@ -169,15 +171,15 @@ html.mm-opened .mm-page {
 }
 
 .responsive-menu-toggle-icon:before {
-  top: 13px;
+  top: 16px;
 }
 
 .responsive-menu-toggle-icon span.icon {
-  top: 19px;
+  top: 22px;
 }
 
 .responsive-menu-toggle-icon:after {
-  top: 25px;
+  top: 28px;
 }
 
 .responsive-menu-toggle-icon:before,
@@ -231,4 +233,8 @@ ul.menu.mm-listview a.is-active {
 
 .mm-panel a:hover {
   border: none;
+}
+
+.mm-panel_opened ul.mm-listview li.mm-listitem > a {
+  color: var(--menu-color);  
 }

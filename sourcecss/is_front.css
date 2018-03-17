@@ -38,9 +38,14 @@ div.is_front {
         padding-top: 1rem;
     }
     & .front-row h3 {
-        font-family: stamPeteRegular;
-        color: var(--misfits-logo-blue);
+        /* font-family: stamPeteRegular; */
         margin-top: 0;
+        font-family: var(--headings-font-family);
+        font-weight: var(--headings-font-weight);
+        line-height: var(--headings-line-height);
+        & > a {
+          color: var(--misfits-logo-blue);
+        }
     }
     & .front-text {
       flex: 1;
@@ -66,15 +71,18 @@ div.is_front {
         }
       }
   }
-  /* @media screen and (--exceeds-iPhone-6s-Landscape-height) {
+  @media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
     div.is_front {
       & .views-element-container > div {
-          margin: 6rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+          margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
         }
       }
-  } */
+  }
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
+    & .views-element-container > div {
+      margin: 6rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+    }
     & .front-row {
         height: var(--front-row-height);
         max-width: 50rem;

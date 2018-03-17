@@ -5,6 +5,12 @@ div#block-searchform {
     display: flex;
     background-color: var(--colour-misfits-lightest-grey-transparent);
   }
+  & #edit-keys {
+    margin: 4px;
+  }
+  & #edit-actions {
+    padding-left: 0.5rem;
+  }
   & .button.form-submit {
     display: block;
     background: url(../icons/loupe.svg) no-repeat center;

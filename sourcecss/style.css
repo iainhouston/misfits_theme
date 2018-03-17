@@ -1,7 +1,9 @@
 @import url('fonts.css');
 @import url('normalize.css');
-@import url('variables.css');
+@import url('shoelace_variables.css');
+@import url('misfits_variables.css');
 @import url('content.css');
+@import url('misfits_page.css');
 @import url('header.css');
 @import url('font-awesome.css');
 @import url('responsive_menu.css');
