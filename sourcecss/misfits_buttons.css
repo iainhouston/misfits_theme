@@ -5,3 +5,15 @@ button,
     color: var(  --button-color);
   }
 }
+
+#block-misfitsv4-local-tasks {
+  & .misfits_local_tasks {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+  }
+  & button {
+    /* margin-left: 1rem; */
+    margin-right: 1rem;
+  }
+}

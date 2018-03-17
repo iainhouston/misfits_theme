@@ -18,3 +18,7 @@
     margin: 0 auto;
   }
 }
+
+#page main {
+  padding-top: 2rem;
+}

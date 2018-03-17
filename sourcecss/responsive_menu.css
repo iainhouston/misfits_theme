@@ -76,7 +76,7 @@ html.mm-opened .mm-page {
   padding-top: 0.3em;
   padding-right: 1em;
   padding-bottom: 0.35em;
-  padding-left: 1em;
+  /* padding-left: 1em; */
   color: var(--misfits-logo-blue);
 }
 
@@ -236,5 +236,5 @@ ul.menu.mm-listview a.is-active {
 }
 
 .mm-panel_opened ul.mm-listview li.mm-listitem > a {
-  color: var(--menu-color);  
+  color: var(--menu-color);
 }

@@ -615,6 +615,10 @@ ul ul {
   max-width: 960px;
   margin: 0 auto;
 }
+#page main {
+  padding-top: 32px;
+  padding-top: 2rem;
+}
 /*
   Header with social media links from icons
 */
@@ -1961,7 +1965,7 @@ html.mm-opened .mm-page {
   padding-top: 0.3em;
   padding-right: 1em;
   padding-bottom: 0.35em;
-  padding-left: 1em;
+  /* padding-left: 1em; */
   color: rgb(0, 137, 188);
 }
 .horizontal-menu > li ul {
@@ -2101,7 +2105,7 @@ ul.menu.mm-listview a.is-active {
   border: none;
 }
 .mm-panel_opened ul.mm-listview li.mm-listitem > a {
-  color: #00aeef;  
+  color: #00aeef;
 }
 div#block-searchform {
   background-color: rgba(245, 245, 245, .9);
@@ -2242,6 +2246,19 @@ button,
 }
 button > a, .button > a {
   color: Whitesmoke;
+}
+#block-misfitsv4-local-tasks .misfits_local_tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*justify-content: space-around; */
+}
+#block-misfitsv4-local-tasks button {
+  /*margin-left: 1rem; */
+  margin-right: 16px;
+  margin-right: 1rem;
 }
 div.region_primary_menu {
   display: -webkit-box;
