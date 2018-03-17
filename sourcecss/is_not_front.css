@@ -1,20 +1,18 @@
 div.is_not_front {
   width: 100%;
-  & main {
+  & #page > main {
     max-width: var(--container-max-width-lg);
     margin: 0 auto;
-    display: grid;
-    grid-template-rows: auto;
-    grid-gap: 0.5rem;
-    justify-items: left;
-    grid-template-columns: auto 1fr 12rem;
-    grid-template-areas:
-      "content . sidebar";
-    & .layout-content {
-      grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    & > .layout-content {
+      flex-grow: 4;
     }
-    & aside {
-      grid-area: sidebar;
+    & > aside {
+      width: 128px;
+      flex-grow: 1;
     }
   }
 }

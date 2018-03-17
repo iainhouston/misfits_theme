@@ -2839,20 +2839,29 @@ div.is_front .front-row video,
 div.is_not_front {
   width: 100%
 }
-div.is_not_front main {
+div.is_not_front #page > main {
   max-width: 960px;
   margin: 0 auto;
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 0.5rem;
-  justify-items: left;
-  grid-template-columns: auto 1fr 12rem;
-  grid-template-areas:
-      "content . sidebar";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
-div.is_not_front main .layout-content {
-  grid-area: content;
+div.is_not_front #page > main > .layout-content {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
 }
-div.is_not_front main aside {
-  grid-area: sidebar;
+div.is_not_front #page > main > aside {
+  width: 128px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
