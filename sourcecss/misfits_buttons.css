@@ -10,7 +10,7 @@ button,
   & .misfits_local_tasks {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    padding-bottom: 0.5rem;
   }
   & button {
     /* margin-left: 1rem; */

@@ -624,8 +624,8 @@ div.is_not_front #page > main > .layout-content {
   padding: 0 0.5rem;
 }
 div.is_not_front #page > footer > .region_footer {
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 8px 0;
+  padding: 0.5rem 0;
 }
 @media screen and (min-width: 321px) {
   div.is_not_front #page > main,  div.is_not_front #page > footer {
@@ -2269,7 +2269,8 @@ button > a, .button > a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /*justify-content: space-around; */
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 #block-misfitsv4-local-tasks button {
   /*margin-left: 1rem; */
@@ -2667,6 +2668,10 @@ progress {
 .input-valid select {
   color: #2ecc40 !important;
   border-color: #2ecc40 !important;
+}
+form > div {
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 div.is_front {
   width: 100%
