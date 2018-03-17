@@ -7,13 +7,59 @@ button,
 }
 
 #block-misfitsv4-local-tasks {
-  & .misfits_local_tasks {
+  & ul {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 0.5rem;
+    list-style: none;
+    padding: 0;
+    & > li > a {
+      margin-right: 1rem;
+      font-family: var(--button-font-family);
+      font-size: var(--button-font-size);
+      font-weight: var(--button-font-weight);
+      text-align: center;
+      text-decoration: none;
+      color: var(--button-color);
+      background-color: var(--button-bg-color-primary);
+      border-radius: var(--button-border-radius);
+      border: none;
+      height: var(--input-height);
+      line-height: 1;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      padding: calc(var(--component-spacing) * .5) calc(var(--component-spacing) * .75);
+      box-shadow: var(--button-box-shadow);
+      cursor: pointer;
+      display: inline-block;
+      transition: .1s box-shadow, .1s background-color, .1s color;
+    }
   }
-  & button {
-    /* margin-left: 1rem; */
-    margin-right: 1rem;
-  }
+}
+
+
+button:hover,
+.button:hover {
+  color: var(--button-color);
+  text-decoration: none;
+}
+
+button:hover:not(:disabled),
+.button:hover:not(.disabled) {
+  box-shadow: var(--button-box-shadow-hover);
+}
+
+button:active:not(:disabled),
+button.active:not(:disabled),
+.button.active:not(.disabled) {
+  color: var(--button-color);
+  box-shadow: var(--button-box-shadow-active);
+}
+
+button:disabled,
+button.disabled,
+.button.disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
