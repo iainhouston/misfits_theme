@@ -2263,7 +2263,7 @@ button,
 button > a, .button > a {
   color: Whitesmoke;
 }
-#block-misfitsv4-local-tasks ul {
+#block-misfitsv4-local-tasks > ul, #block-misfitsv4-user-login > ul, #block-misfitsv4-tools > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2273,8 +2273,12 @@ button > a, .button > a {
   padding-bottom: 0.5rem;
   list-style: none;
   padding: 0;
+  /*& > li:hover {
+      color: var(--button-color);
+      text-decoration: none;
+    } */
 }
-#block-misfitsv4-local-tasks ul > li > a {
+#block-misfitsv4-local-tasks > ul > li > a, #block-misfitsv4-user-login > ul > li > a, #block-misfitsv4-tools > ul > li > a {
   margin-right: 16px;
   margin-right: 1rem;
   font-family: stamPeteRegular;
@@ -2305,28 +2309,18 @@ button > a, .button > a {
   -webkit-transition: .1s box-shadow, .1s background-color, .1s color;
   transition: .1s box-shadow, .1s background-color, .1s color;
 }
-button:hover,
-.button:hover {
+#block-misfitsv4-local-tasks > ul > li > a:hover,
+      #block-misfitsv4-local-tasks > ul > li > a .button:hover,
+      #block-misfitsv4-user-login > ul > li > a:hover,
+      #block-misfitsv4-user-login > ul > li > a .button:hover,
+      #block-misfitsv4-tools > ul > li > a:hover,
+      #block-misfitsv4-tools > ul > li > a .button:hover {
   color: Whitesmoke;
   text-decoration: none;
 }
-button:hover:not(:disabled),
-.button:hover:not(.disabled) {
-  -webkit-box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 -2px 0 rgba(0, 0, 0, .1);
-          box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 -2px 0 rgba(0, 0, 0, .1);
-}
-button:active:not(:disabled),
-button.active:not(:disabled),
-.button.active:not(.disabled) {
-  color: Whitesmoke;
-  -webkit-box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
-          box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
-}
-button:disabled,
-button.disabled,
-.button.disabled {
-  opacity: .5;
-  cursor: not-allowed;
+#block-misfitsv4-user-login li {
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 div.region_primary_menu {
   display: -webkit-box;
@@ -2723,6 +2717,10 @@ progress {
 form > div {
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
+}
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
+	outline: none;
+  border-color: #00aeef;
 }
 div.is_front {
   width: 100%

@@ -6,13 +6,19 @@ button,
   }
 }
 
-#block-misfitsv4-local-tasks {
-  & ul {
+#block-misfitsv4-local-tasks,
+#block-misfitsv4-user-login,
+#block-misfitsv4-tools {
+  & > ul {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 0.5rem;
     list-style: none;
     padding: 0;
+    /* & > li:hover {
+      color: var(--button-color);
+      text-decoration: none;
+    } */
     & > li > a {
       margin-right: 1rem;
       font-family: var(--button-font-family);
@@ -34,32 +40,15 @@ button,
       cursor: pointer;
       display: inline-block;
       transition: .1s box-shadow, .1s background-color, .1s color;
+      &:hover,
+      & .button:hover {
+        color: var(--button-color);
+        text-decoration: none;
+      }
     }
   }
 }
 
-
-button:hover,
-.button:hover {
-  color: var(--button-color);
-  text-decoration: none;
-}
-
-button:hover:not(:disabled),
-.button:hover:not(.disabled) {
-  box-shadow: var(--button-box-shadow-hover);
-}
-
-button:active:not(:disabled),
-button.active:not(:disabled),
-.button.active:not(.disabled) {
-  color: var(--button-color);
-  box-shadow: var(--button-box-shadow-active);
-}
-
-button:disabled,
-button.disabled,
-.button.disabled {
-  opacity: .5;
-  cursor: not-allowed;
+#block-misfitsv4-user-login li {
+  padding-bottom: 0.5rem;
 }
