@@ -1,0 +1,7 @@
+button,
+.button {
+  letter-spacing: 2px;
+  & > a {
+    color: var(  --button-color);
+  }
+}

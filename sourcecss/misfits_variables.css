@@ -26,11 +26,17 @@
   --front-views-element-container-bottom-margin: 4rem;
 
   --menu-font-family: stamPeteRegular;
+  --button-font-family: stamPeteRegular;
   --menu-font-weight: var(--font-weight-light);
   --menu-line-height: 1;
   --menu-margin-bottom: .5rem;
-  --menu-color: var( --colour-misfits-blue);
+  --menu-color: var(--colour-misfits-blue);
+  --button-color: var(--colour-misfits-lightest-grey);
+  --button-bg-color-primary: var(--colour-misfits-blue);
   --menu-font-size: 1.25rem;
+
+  --link-color: var(  --colour-misfits-blue);
+
 
   --container-max-width-lg: 960px;
 
