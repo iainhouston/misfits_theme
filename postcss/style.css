@@ -2134,7 +2134,7 @@ div#block-searchform form {
   background-color: rgba(245, 245, 245, .9);
 }
 div#block-searchform #edit-keys {
-  margin: 4px;
+  margin: 2px;
 }
 div#block-searchform #edit-actions {
   padding-left: 8px;
@@ -2145,7 +2145,7 @@ div#block-searchform .button.form-submit {
   background: url(../icons/loupe.svg) no-repeat center;
   cursor: pointer;
   height: 30px;
-  margin: 0;
+  margin: 2px;
   overflow: hidden;
   padding: 0;
   text-indent: -9999px;
