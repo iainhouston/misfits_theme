@@ -13,7 +13,6 @@ postcss = require('gulp-postcss')
 browserSync = require('browser-sync').create()
 reload = browserSync.reload
 
-
 gulp.task 'drushPHP', shell.task([ "drush #{drushAlias} cr" ])
 
 gulp.task 'drushTwig', shell.task([ "drush #{drushAlias} cache-clear theme-registry" ])
@@ -29,7 +28,7 @@ gulp.task 'css', ->
     require('postcss-reporter')()
   ]))
   .pipe(gulp.dest('./postcss'))
-  .pipe reload(stream: true)
+  .pipe browserSync.stream()
 
 gulp.task 'watch-server', [
   'css'
@@ -39,10 +38,10 @@ gulp.task 'watch-server', [
   browserSync.init
     proxy: test_site_name
     reloadOnRestart: true
-    browser: '/Applications/FirefoxDeveloperEdition.app'
+    browser: '/Applications/Firefox Developer Edition.app'
   gulp.watch cssSources,    [ 'css' ], reload
-  gulp.watch drupalPHPSources, reload
-  gulp.watch drupalTemplateSources, ['drushTwig'], reload
+  gulp.watch drupalPHPSources, ['drushPHP'], reload
+  gulp.watch drupalTemplateSources, ['drushPHP'], reload
   return
 
 # Default task to be run with `gulp`
