@@ -8,13 +8,13 @@ div.is_not_front {
     justify-content: space-between;
     align-items: start;
     & > .layout-content {
-      max-width: 40rem;
+      max-width: calc(960px - 200px);
       flex-grow: 4;
     }
     & > aside {
-      width: 128px;
+      width: 180px;
+      padding-left: 20px;
       flex-grow: 1;
-      padding-left: 1rem;
     }
   }
 }
@@ -35,9 +35,6 @@ div.is_not_front #page {
   div.is_not_front #page {
     & > main,  & > footer {
       padding-top: 2rem;
-      & > .layout-content {
-        padding: 0;
-      }
     }
   }
 }

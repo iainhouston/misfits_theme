@@ -16,5 +16,6 @@
   & > footer > .region_footer {
     max-width: var(--container-max-width-lg);
     margin: 0 auto;
+    padding: 0 0.5rem;
   }
 }

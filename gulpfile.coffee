@@ -13,6 +13,8 @@ postcss = require('gulp-postcss')
 browserSync = require('browser-sync').create()
 reload = browserSync.reload
 
+ERROR_LEVELS = ['error', 'warning']
+
 gulp.task 'drushPHP', shell.task([ "drush #{drushAlias} cr" ])
 
 gulp.task 'drushTwig', shell.task([ "drush #{drushAlias} cache-clear theme-registry" ])
