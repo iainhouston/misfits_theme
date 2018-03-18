@@ -10,9 +10,7 @@ div.is_front {
       justify-items: left;
       grid-template-columns: 20% 1fr 40px;
       grid-template-areas:
-        "logo content . "
-        ".    content . "
-        ".    .       . ";
+        "logo content . ";
     }
     & header {
         grid-area: logo;
@@ -81,7 +79,7 @@ div.is_front {
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
     & .views-element-container > div {
-      margin: 6rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+      margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
     }
     & .front-row {
         height: var(--front-row-height);
