@@ -8,6 +8,7 @@ div.is_not_front {
     justify-content: space-between;
     align-items: start;
     & > .layout-content {
+      max-width: 40rem;
       flex-grow: 4;
     }
     & > aside {

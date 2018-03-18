@@ -30,7 +30,7 @@ gulp.task('css', function() {
   return gulp.src('sourcecss/style.css').pipe(postcss([require('postcss-import')(), require('postcss-url')(), require('postcss-nesting')({}), require('postcss-cssnext')(), require('postcss-browser-reporter')(), require('postcss-reporter')()])).pipe(gulp.dest('./postcss')).pipe(browserSync.stream());
 });
 
-gulp.task('watch-server', ['css', 'drushPHP', 'drushTwig'], function() {
+gulp.task('watch-server', ['css', 'drushPHP'], function() {
   browserSync.init({
     proxy: test_site_name,
     reloadOnRestart: true,

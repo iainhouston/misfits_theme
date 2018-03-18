@@ -2838,6 +2838,8 @@ div.is_not_front #page > main {
           align-items: start;
 }
 div.is_not_front #page > main > .layout-content {
+  max-width: 640px;
+  max-width: 40rem;
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;

@@ -33,7 +33,6 @@ gulp.task 'css', ->
 gulp.task 'watch-server', [
   'css'
   'drushPHP'
-  'drushTwig'
 ], ->
   browserSync.init
     proxy: test_site_name
