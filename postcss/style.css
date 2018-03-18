@@ -2263,7 +2263,7 @@ button,
 button > a, .button > a {
   color: Whitesmoke;
 }
-#block-misfitsv4-local-tasks > ul, #block-misfitsv4-user-login > ul, #block-misfitsv4-tools > ul {
+#block-misfitsv4-local-tasks > ul, #block-misfitsv4-user-login > ul, #block-misfitsv4-tools > ul, #block-misfitsv4-account-menu > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2278,7 +2278,7 @@ button > a, .button > a {
       text-decoration: none;
     } */
 }
-#block-misfitsv4-local-tasks > ul > li > a, #block-misfitsv4-user-login > ul > li > a, #block-misfitsv4-tools > ul > li > a {
+#block-misfitsv4-local-tasks > ul > li > a, #block-misfitsv4-user-login > ul > li > a, #block-misfitsv4-tools > ul > li > a, #block-misfitsv4-account-menu > ul > li > a {
   margin-right: 16px;
   margin-right: 1rem;
   font-family: stamPeteRegular;
@@ -2314,11 +2314,14 @@ button > a, .button > a {
       #block-misfitsv4-user-login > ul > li > a:hover,
       #block-misfitsv4-user-login > ul > li > a .button:hover,
       #block-misfitsv4-tools > ul > li > a:hover,
-      #block-misfitsv4-tools > ul > li > a .button:hover {
+      #block-misfitsv4-tools > ul > li > a .button:hover,
+      #block-misfitsv4-account-menu > ul > li > a:hover,
+      #block-misfitsv4-account-menu > ul > li > a .button:hover {
   color: Whitesmoke;
   text-decoration: none;
 }
-#block-misfitsv4-user-login li {
+#block-misfitsv4-user-login li,
+#block-misfitsv4-account-menu li {
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
 }
@@ -2717,6 +2720,8 @@ progress {
 form > div {
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
+  max-width: 480px;
+  max-width: 30rem;
 }
 input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
 	outline: none;
@@ -2864,4 +2869,34 @@ div.is_not_front #page > main > aside {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  padding-left: 16px;
+  padding-left: 1rem;
 }
+/*! Alerts */
+.alert {
+  color: white;
+  background-color: tomato;
+  border-radius: .25rem;
+  padding: 16px 16px;
+  padding: 1rem 1rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+.alert:empty {
+  display: none;
+}
+.alert-success { background-color: #2ecc40; }
+.alert-info { background-color: #7fdbff; }
+.alert-warning { background-color: #ff851b; }
+.alert-danger { background-color: #ff4136; }
+.alert-inverse { background-color: #111; }
+.alert a {
+  color: inherit;
+  text-decoration: underline;
+}
+.alert :last-child {
+  margin-bottom: 0;
+}
+.alert-status { background-color: #7fdbff; }
+.alert-error { background-color: #ff4136; }

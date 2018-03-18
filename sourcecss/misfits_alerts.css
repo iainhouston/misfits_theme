@@ -1,0 +1,2 @@
+.alert-status { background-color: var(--alert-bg-color-info); }
+.alert-error { background-color: var(--alert-bg-color-danger); }

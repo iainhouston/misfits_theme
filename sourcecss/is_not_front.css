@@ -13,6 +13,7 @@ div.is_not_front {
     & > aside {
       width: 128px;
       flex-grow: 1;
+      padding-left: 1rem;
     }
   }
 }

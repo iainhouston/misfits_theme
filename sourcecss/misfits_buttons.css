@@ -8,7 +8,8 @@ button,
 
 #block-misfitsv4-local-tasks,
 #block-misfitsv4-user-login,
-#block-misfitsv4-tools {
+#block-misfitsv4-tools,
+#block-misfitsv4-account-menu {
   & > ul {
     display: flex;
     flex-wrap: wrap;
@@ -49,6 +50,7 @@ button,
   }
 }
 
-#block-misfitsv4-user-login li {
+#block-misfitsv4-user-login li,
+#block-misfitsv4-account-menu li {
   padding-bottom: 0.5rem;
 }
