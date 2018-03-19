@@ -40,15 +40,15 @@
 
   --link-color: var(  --colour-misfits-blue);
 
-
-  --container-max-width-lg: 960px;
-
   --headings-font-family: stamPeteRegular;
 
+  --container-max-width-xxxs: 200px;
+  --container-max-width-xxs: 319px;
+  --container-max-width-xs: 575px;
+  --container-max-width-sm: 991px;
+  --container-max-width-lg: 1199px;
+  --container-max-width-xl: 1200px;
 }
-
-/*
-
 /* Core breakpoints */
 @custom-media --breakpoint-xs-up only screen and (min-width: 0);
 @custom-media --breakpoint-sm-up only screen and (min-width: 576px);

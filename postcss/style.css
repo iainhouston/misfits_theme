@@ -406,10 +406,7 @@ template {
 }
 :root {
   /* TODO: Iain: Harmonise with Shoelace*/ /* rgb(245,245,245 */
-
 }
-/*
-
 /* Core breakpoints */
 /* TODO: Iain: Harmonise with Shoelace*/
 /*! Content */
@@ -612,7 +609,7 @@ ul ul {
   #page > .primary_menu_wrapper > .region_primary_menu,
   #page > main > .layout-content,
   #page > footer > .region_footer {
-  max-width: 960px;
+  max-width: 1199px;
   margin: 0 auto;
   padding: 0 8px;
   padding: 0 0.5rem;
@@ -2825,7 +2822,9 @@ div.is_not_front {
   width: 100%
 }
 div.is_not_front #page > main {
-  max-width: 960px;
+  max-width: 1200px;
+  padding-top: 8px;
+  padding-top: 0.5rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2840,33 +2839,57 @@ div.is_not_front #page > main {
           align-items: start;
 }
 div.is_not_front #page > main > .layout-content {
-  max-width: 760px;
+  width: 70%;
+  min-width: 319px;
+  max-width: 575px;
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
+  padding: 0 8px;
+  padding: 0 0.5rem;
 }
 div.is_not_front #page > main > aside {
-  width: 180px;
-  padding-left: 20px;
+  width: 30%;
+  /*min-width: 0; */
+  max-width: 200px;
+  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-div.is_not_front #page > main {
-  padding-top: 8px;
-  padding-top: 0.5rem;
-}
-div.is_not_front #page > main > .layout-content {
-  padding: 0 8px;
-  padding: 0 0.5rem;
-}
-div.is_not_front #page > footer > .region_footer {
+div.is_not_front #page > main > footer > .region_footer {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
-@media screen and (min-width: 321px) {
-  div.is_not_front #page > main,  div.is_not_front #page > footer {
-    padding-top: 2rem;
+/* @media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
+  div.is_not_front #page {
+    & > main,  & > footer {
+      padding-top: 2rem;
+      width: 180px;
+      padding-left: 20px;
+      flex-grow: 1;
+    }
+  }
+} */
+@media screen and (min-width: 1025px) {
+  div.is_not_front #page > main > .layout-content {
+    width: 70%;
+    min-width: 575px;
+    max-width: 1199px;
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+    padding: 5vh 0.5rem 0 0.5rem;
+  }
+  div.is_not_front #page > main > aside {
+    width: 30%;
+    min-width: 0;
+    max-width: 319px;
+    padding: 5vh 0.5rem 0 0.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 /*! Alerts */
