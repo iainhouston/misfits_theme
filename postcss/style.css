@@ -2290,7 +2290,6 @@ button > a, .button > a {
 }
 #block-misfitsv4-local-tasks > ul > li > a:hover, #block-misfitsv4-user-login > ul > li > a:hover, #block-misfitsv4-tools > ul > li > a:hover, #block-misfitsv4-account-menu > ul > li > a:hover {
   color: #99e4ff;
-  text-decoration: none;
 }
 #block-misfitsv4-local-tasks > ul > li > a.is-active, #block-misfitsv4-user-login > ul > li > a.is-active, #block-misfitsv4-tools > ul > li > a.is-active, #block-misfitsv4-account-menu > ul > li > a.is-active {
   color: #99e4ff;
@@ -2301,6 +2300,15 @@ button > a, .button > a {
 #block-misfitsv4-account-menu li {
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
+}
+button:hover,
+.button:hover,
+button:hover:not(:disabled),
+.button:hover:not(.disabled),
+button:active:not(:disabled),
+button.active:not(:disabled),
+.button.active:not(.disabled){
+  color: #99e4ff;
 }
 div.region_primary_menu {
   display: -webkit-box;

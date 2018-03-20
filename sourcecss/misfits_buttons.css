@@ -42,7 +42,6 @@ button,
       transition: .1s box-shadow, .1s background-color, .1s color;
       &:hover {
         color: var(--button-active-colour);
-        text-decoration: none;
       }
       &.is-active {
         color: var(--button-active-colour);
@@ -55,4 +54,14 @@ button,
 #block-misfitsv4-user-login li,
 #block-misfitsv4-account-menu li {
   padding-bottom: 0.5rem;
+}
+
+button:hover,
+.button:hover,
+button:hover:not(:disabled),
+.button:hover:not(.disabled),
+button:active:not(:disabled),
+button.active:not(:disabled),
+.button.active:not(.disabled){
+  color: var(--button-active-colour);
 }
