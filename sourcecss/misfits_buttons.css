@@ -16,10 +16,9 @@ button,
     padding-bottom: 0.5rem;
     list-style: none;
     padding: 0;
-    /* & > li:hover {
-      color: var(--button-color);
-      text-decoration: none;
-    } */
+    & > li {
+      padding-bottom: 0.5rem;
+    }
     & > li > a {
       margin-right: 1rem;
       font-family: var(--button-font-family);
@@ -41,10 +40,13 @@ button,
       cursor: pointer;
       display: inline-block;
       transition: .1s box-shadow, .1s background-color, .1s color;
-      &:hover,
-      & .button:hover {
-        color: var(--button-color);
+      &:hover {
+        color: var(--button-active-colour);
         text-decoration: none;
+      }
+      &.is-active {
+        color: var(--button-active-colour);
+        box-shadow: var(--button-box-shadow-active);
       }
     }
   }

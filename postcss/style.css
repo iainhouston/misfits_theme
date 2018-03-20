@@ -2252,10 +2252,10 @@ button > a, .button > a {
   padding-bottom: 0.5rem;
   list-style: none;
   padding: 0;
-  /*& > li:hover {
-      color: var(--button-color);
-      text-decoration: none;
-    } */
+}
+#block-misfitsv4-local-tasks > ul > li, #block-misfitsv4-user-login > ul > li, #block-misfitsv4-tools > ul > li, #block-misfitsv4-account-menu > ul > li {
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 #block-misfitsv4-local-tasks > ul > li > a, #block-misfitsv4-user-login > ul > li > a, #block-misfitsv4-tools > ul > li > a, #block-misfitsv4-account-menu > ul > li > a {
   margin-right: 16px;
@@ -2288,16 +2288,14 @@ button > a, .button > a {
   -webkit-transition: .1s box-shadow, .1s background-color, .1s color;
   transition: .1s box-shadow, .1s background-color, .1s color;
 }
-#block-misfitsv4-local-tasks > ul > li > a:hover,
-      #block-misfitsv4-local-tasks > ul > li > a .button:hover,
-      #block-misfitsv4-user-login > ul > li > a:hover,
-      #block-misfitsv4-user-login > ul > li > a .button:hover,
-      #block-misfitsv4-tools > ul > li > a:hover,
-      #block-misfitsv4-tools > ul > li > a .button:hover,
-      #block-misfitsv4-account-menu > ul > li > a:hover,
-      #block-misfitsv4-account-menu > ul > li > a .button:hover {
-  color: Whitesmoke;
+#block-misfitsv4-local-tasks > ul > li > a:hover, #block-misfitsv4-user-login > ul > li > a:hover, #block-misfitsv4-tools > ul > li > a:hover, #block-misfitsv4-account-menu > ul > li > a:hover {
+  color: #99e4ff;
   text-decoration: none;
+}
+#block-misfitsv4-local-tasks > ul > li > a.is-active, #block-misfitsv4-user-login > ul > li > a.is-active, #block-misfitsv4-tools > ul > li > a.is-active, #block-misfitsv4-account-menu > ul > li > a.is-active {
+  color: #99e4ff;
+  -webkit-box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
+          box-shadow: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
 }
 #block-misfitsv4-user-login li,
 #block-misfitsv4-account-menu li {

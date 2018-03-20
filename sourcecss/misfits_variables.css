@@ -1,6 +1,7 @@
 :root {
   /* TODO: Iain: Harmonise with Shoelace*/
   --colour-misfits-blue: #00aeef;
+  --colour-misfits-lighter-blue: #99e4ff;
   --colour-misfits-darker-grey: #404040;
   --colour-misfits-dark-grey: Gray;
   --colour-misfits-grey: #58585A;
@@ -35,6 +36,7 @@
   --menu-margin-bottom: .5rem;
   --menu-color: var(--colour-misfits-blue);
   --button-color: var(--colour-misfits-lightest-grey);
+  --button-active-colour: var(--colour-misfits-lighter-blue);
   --button-bg-color-primary: var(--colour-misfits-blue);
   --menu-font-size: 1.25rem;
 
