@@ -9,7 +9,7 @@ div.is_front {
       /* align-items: center; */
       /* justify-items: left; */
       grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-      grid-template-rows: minmax(0vh, 8vh) 600px;
+      grid-template-rows: 2vh 600px;
       grid-template-areas:
         ".  .    .        ."
         ".  logo content .";
@@ -17,7 +17,7 @@ div.is_front {
     & header {
         grid-area: logo;
         & > img {
-            max-height: 60vh;
+            max-height: 55vh;
         }
     }
     /* & main {
