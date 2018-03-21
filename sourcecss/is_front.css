@@ -1,16 +1,18 @@
 div.is_front {
   width: 100%;
   & .views-element-container > div {
-      margin: 1rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
-      max-height: 70%;
+      /* margin: 1rem 1rem var(--front-views-element-container-bottom-margin) 1rem; */
+      /* max-height: 70%; */
       display: grid;
-      grid-template-rows: auto;
-      grid-gap: 0.5rem;
-      align-items: center;
-      justify-items: left;
-      grid-template-columns: 20% 1fr 40px;
+      /* grid-template-rows: auto; */
+      /* grid-gap: 0.5rem; */
+      /* align-items: center; */
+      /* justify-items: left; */
+      grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+      grid-template-rows: minmax(0vh, 8vh) 600px;
       grid-template-areas:
-        "logo content . ";
+        ".  .    .        ."
+        ".  logo content .";
     }
     & header {
         grid-area: logo;
