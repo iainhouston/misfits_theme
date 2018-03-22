@@ -409,6 +409,10 @@ template {
 }
 /* Core breakpoints */
 /* TODO: Iain: Harmonise with Shoelace*/
+body.maintenance-page header,  body.maintenance-page main {
+  padding: 32px;
+  padding: 2rem;
+}
 /*! Content */
 /* Box sizing reset */
 html {
