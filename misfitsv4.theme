@@ -1,5 +1,29 @@
 <?php
 
+function misfitsv4_page_attachments_alter(array &$attachments) {
+
+  $theme_path = drupal_get_path('theme', 'misfitsv4');
+
+  /**
+  * in themes/config/misfitsv4 we have .png files of the following sizes.
+  * We need to tell Drupal to add the links to these apple touch icons
+  */
+
+  $apple_icon_sizes = array(72,76,114,120,144,152,180);
+
+  foreach($apple_icon_sizes as $size){
+    $apple = array(
+      '#tag' => 'link',
+      '#attributes' => array(
+        'href' => $GLOBALS['base_url'].'/'.$theme_path.'/apple-touch-icon-'.$size.'x'.$size.'.png',
+        'rel' => 'apple-touch-icon-precomposed',
+        'sizes' => $size . 'x' . $size,
+      ),
+    );
+    $attachments['#attached']['html_head'][] = [$apple, 'apple-touch-icon-'.$size];
+  }
+}
+
 /**
 * Prepares variables for views fields templates.
 *
