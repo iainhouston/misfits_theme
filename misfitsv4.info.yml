@@ -13,7 +13,6 @@ regions:
   highlighted: 'Highlighted'
   help: 'Help'
   content: Content
-  sidebar_first: 'Sidebar first'
   footer: Footer
 
 stylesheets-remove:
