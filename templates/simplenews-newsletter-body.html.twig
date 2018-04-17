@@ -38,33 +38,38 @@
  * @see template_preprocess_simplenews_newsletter_body()
  */
 #}
+<span class="centred_box">
 
 {% if key == 'test' %}
     - - - {{ test_message }} - - -
 {% endif %}
-<h2>{{ title }}</h2>
-{{ build }}
 
+{#
+  Body
+#}
+<h2>{{ title }}</h2>
+<p class="newsletter-body">
+{{ build }}
+</p>
 {#
   Footer
 #}
 <hr>
-<p class="newsletter-legal">This email and any documents sent with it are
-  intended solely for the named recipient and may be legally privileged
-  and/or confidential.
-  <br>
-  If you have received this email in error please destroy it and contact
-  the sender <a href="mailto:info@misfitstheatre.com">here</a>.
+<p class="newsletter-legal">
+  This email and any documents sent with it are intended solely for the named recipient and may be legally privileged and/or confidential.
 </br>
+  If you have received this email in error please destroy it and contact the sender <a href="mailto:info@misfitstheatre.com">here</a>.
+</p>
 {% if not opt_out_hidden %}
     {% if format == 'html' %}
-        <p class="newsletter-footer"><a
-                    href="[simplenews-subscriber:unsubscribe-url]">{{ unsubscribe_text }}</a>
+        <p>
+          <a class="newsletter-unsubscribe"                   href="[simplenews-subscriber:unsubscribe-url]">{{ unsubscribe_text }}</a>
         </p>
     {% else %}
         -- {{ unsubscribe_text }} : [simplenews-subscriber:unsubscribe-url]
     {% endif %}
 {% endif %}
+<p class="newsletter-legal">
   You should not copy, or use the contents, attachments or information in
   any way or pass them to a third party without prior permission from the
   author. Any unauthorised use or disclosure may be unlawful. MISFITS
@@ -76,6 +81,5 @@
   not necessarily reflect the opinions of the organisation. MISFITS
   THEATRE COMPANY UK is a Charitable Incorporated Organisation no.1166100
 </p>
-</td>
-</tr>
-</table>
+
+</span>

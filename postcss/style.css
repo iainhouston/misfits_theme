@@ -2322,6 +2322,16 @@ div.region_primary_menu {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
+div.region_content footer {
+  padding-top: 16px;
+  padding-top: 1rem;
+}
+div.region_content img,
+div.region_content footer img {
+  border: 1px solid #686868;
+  -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
+          box-shadow: 3px 3px 4px 2px lightgrey;
+}
 .thumbscrubber {
     width: 220px;
     display: block;
@@ -2857,50 +2867,23 @@ div.is_not_front #page > main > .layout-content {
   padding: 0 8px;
   padding: 0 0.5rem;
 }
-div.is_not_front #page > main > aside {
-  width: 30%;
-  /*min-width: 0; */
-  max-width: 200px;
-  padding: 0 8px;
-  padding: 0 0.5rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
 div.is_not_front #page > main > footer > .region_footer {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
-/* @media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
-  div.is_not_front #page {
-    & > main,  & > footer {
-      padding-top: 2rem;
-      width: 180px;
-      padding-left: 20px;
-      flex-grow: 1;
+/* @media screen and (--exceeds-iPad-Landscape-width) {
+  div.is_not_front {
+    & #page > main {
+      & > .layout-content {
+        width: 70%;
+        min-width: var(--container-max-width-xs);
+        max-width: var(--container-max-width-lg);
+        flex-grow: 4;
+        padding: 5vh 0.5rem 0 0.5rem;
+      }
     }
   }
 } */
-@media screen and (min-width: 1025px) {
-  div.is_not_front #page > main > .layout-content {
-    width: 70%;
-    min-width: 575px;
-    max-width: 1199px;
-    -webkit-box-flex: 4;
-        -ms-flex-positive: 4;
-            flex-grow: 4;
-    padding: 5vh 0.5rem 0 0.5rem;
-  }
-  div.is_not_front #page > main > aside {
-    width: 30%;
-    min-width: 0;
-    max-width: 319px;
-    padding: 5vh 0.5rem 0 0.5rem;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
 /*! Alerts */
 .alert {
   color: white;

@@ -15,31 +15,13 @@ div.is_not_front {
       flex-grow: 4;
       padding: 0 0.5rem;
     }
-    & > aside {
-      width: 30%;
-      /* min-width: 0; */
-      max-width: var(--container-max-width-xxxs);
-      padding: 0 0.5rem;
-      flex-grow: 1;
-    }
     & > footer > .region_footer {
       padding: 0.5rem 0;
     }
   }
 }
 
-/* @media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
-  div.is_not_front #page {
-    & > main,  & > footer {
-      padding-top: 2rem;
-      width: 180px;
-      padding-left: 20px;
-      flex-grow: 1;
-    }
-  }
-} */
-
-@media screen and (--exceeds-iPad-Landscape-width) {
+/* @media screen and (--exceeds-iPad-Landscape-width) {
   div.is_not_front {
     & #page > main {
       & > .layout-content {
@@ -49,13 +31,6 @@ div.is_not_front {
         flex-grow: 4;
         padding: 5vh 0.5rem 0 0.5rem;
       }
-      & > aside {
-        width: 30%;
-        min-width: 0;
-        max-width: var(--container-max-width-xxs);
-        padding: 5vh 0.5rem 0 0.5rem;
-        flex-grow: 1;
-      }
     }
   }
-}
+} */
