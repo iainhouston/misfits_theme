@@ -51,30 +51,12 @@
   --container-max-width-lg: 1199px;
   --container-max-width-xl: 1200px;
 }
-/* Core breakpoints */
-@custom-media --breakpoint-xs-up only screen and (min-width: 0);
-@custom-media --breakpoint-sm-up only screen and (min-width: 576px);
-@custom-media --breakpoint-md-up only screen and (min-width: 768px);
-@custom-media --breakpoint-lg-up only screen and (min-width: 992px);
-@custom-media --breakpoint-xl-up only screen and (min-width: 1200px);
 
-@custom-media --breakpoint-xs-down only screen and (max-width: 575px);
-@custom-media --breakpoint-sm-down only screen and (max-width: 767px);
-@custom-media --breakpoint-md-down only screen and (max-width: 991px);
-@custom-media --breakpoint-lg-down only screen and (max-width: 1199px);
-@custom-media --breakpoint-xl-down only screen and (min-width: 0);
-
-@custom-media --breakpoint-xs-only only screen and (min-width: 0) and (max-width: 575px);
-@custom-media --breakpoint-sm-only only screen and (min-width: 576px) and (max-width: 767px);
-@custom-media --breakpoint-md-only only screen and (min-width: 768px) and (max-width: 991px);
-@custom-media --breakpoint-lg-only only screen and (min-width: 992px) and (max-width: 1199px);
-@custom-media --breakpoint-xl-only only screen and (min-width: 1200px);
-
-/* TODO: Iain: Harmonise with Shoelace*/
 @custom-media --exceeds-Nokia-Lumia-520-portrait-width (min-width: 321px);
 @custom-media --exceeds-Nokia-Lumia-520-landscape-height (min-height: 321px);
 @custom-media --exceeds-iPad-Landscape-width (min-width: 1025px);
 @custom-media --exceeds-iPad-Portrait-width (min-width: 769px);
+@custom-media --triggers-horizontal-menu (min-width: 851px);
 @custom-media --within-iPad-Portrait-width (max-width: 768px);
 @custom-media --exceeds-iPhone-6s-Portrait-width (min-width: 376px);
 @custom-media --exceeds-iPhone-6s-Landscape-width (min-width: 668px);

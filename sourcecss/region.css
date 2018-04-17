@@ -5,8 +5,3 @@ div.region_primary_menu {
 div.region_content footer {
   padding-top: 1rem;
 }
-div.region_content img,
-div.region_content footer img {
-  border: 1px solid var(--colour-misfits-mid-grey);
-  box-shadow: 3px 3px 4px 2px var(--colour-misfits-light-grey);
-}

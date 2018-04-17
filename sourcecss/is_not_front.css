@@ -18,6 +18,11 @@ div.is_not_front {
     & > footer > .region_footer {
       padding: 0.5rem 0;
     }
+    & div.region_content img,
+    & div.region_content footer img {
+      border: 1px solid var(--colour-misfits-mid-grey);
+      box-shadow: 3px 3px 4px 2px var(--colour-misfits-light-grey);
+    }
   }
 }
 

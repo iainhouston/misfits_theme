@@ -36,11 +36,16 @@ html.mm-opened .mm-page {
 }
 
 #block-horizontalmenu {
-  display: block ;
-  width: 100%;
+  display: none ;
   & ul.horizontal-menu {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media screen and (--triggers-horizontal-menu) {
+  #block-horizontalmenu {
+    display: block;
+    width: 100%;
   }
 }
 

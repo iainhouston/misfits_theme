@@ -407,8 +407,6 @@ template {
 :root {
   /* TODO: Iain: Harmonise with Shoelace*/ /* rgb(245,245,245 */
 }
-/* Core breakpoints */
-/* TODO: Iain: Harmonise with Shoelace*/
 body.maintenance-page header,  body.maintenance-page main {
   padding: 32px;
   padding: 2rem;
@@ -1924,8 +1922,7 @@ html.mm-opened .mm-page {
   padding-left: 15rem;
 }
 #block-horizontalmenu {
-  display: block ;
-  width: 100%
+  display: none 
 }
 #block-horizontalmenu ul.horizontal-menu {
   display: -webkit-box;
@@ -1934,6 +1931,12 @@ html.mm-opened .mm-page {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (min-width: 851px) {
+  #block-horizontalmenu {
+    display: block;
+    width: 100%;
+  }
 }
 .horizontal-menu {
   position: relative;
@@ -2325,12 +2328,6 @@ div.region_primary_menu {
 div.region_content footer {
   padding-top: 16px;
   padding-top: 1rem;
-}
-div.region_content img,
-div.region_content footer img {
-  border: 1px solid #686868;
-  -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
-          box-shadow: 3px 3px 4px 2px lightgrey;
 }
 .thumbscrubber {
     width: 220px;
@@ -2870,6 +2867,12 @@ div.is_not_front #page > main > .layout-content {
 div.is_not_front #page > main > footer > .region_footer {
   padding: 8px 0;
   padding: 0.5rem 0;
+}
+div.is_not_front #page > main div.region_content img,
+    div.is_not_front #page > main div.region_content footer img {
+  border: 1px solid #686868;
+  -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
+          box-shadow: 3px 3px 4px 2px lightgrey;
 }
 /* @media screen and (--exceeds-iPad-Landscape-width) {
   div.is_not_front {
