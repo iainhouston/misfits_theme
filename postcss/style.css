@@ -407,6 +407,7 @@ template {
 :root {
   /* TODO: Iain: Harmonise with Shoelace*/ /* rgb(245,245,245 */
 }
+/*  If you change the breakpoint then also reconfigure responsive menusw */
 body.maintenance-page header,  body.maintenance-page main {
   padding: 32px;
   padding: 2rem;
@@ -2111,7 +2112,8 @@ ul.menu.mm-listview a.is-active {
 }
 div#block-searchform {
   background-color: rgba(245, 245, 245, .9);
-  padding-top: 8px
+  padding-top: 8px;
+  max-width: 55%
 }
 div#block-searchform form {
   display: -webkit-box;

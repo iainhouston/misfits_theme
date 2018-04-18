@@ -1,6 +1,7 @@
 div#block-searchform {
   background-color: var(--colour-misfits-lightest-grey-transparent);
   padding-top: 8px;
+  max-width: 55%;
   & form {
     display: flex;
     background-color: var(--colour-misfits-lightest-grey-transparent);
