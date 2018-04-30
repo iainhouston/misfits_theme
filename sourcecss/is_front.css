@@ -1,13 +1,28 @@
-div.is_front {
-  /* width: 100%; */
+body.path-frontpage {
   & .views-element-container > div {
-      display: grid;
-      grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-      grid-template-rows: 2vh 600px;
-      grid-template-areas:
-        ".  .    .        ."
-        ".  logo content .";
-    }
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+    grid-template-rows: 2vh 600px;
+    grid-template-areas:
+    ".  .    .        ."
+    ".  logo content .";
+  }
+}
+
+body.not-frontpage.path-events {
+  & .views-element-container > div {
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+    grid-template-rows: 2vh 600px;
+    grid-template-areas:
+    ".  .    .        ."
+    ".  logo content ."
+    ".  pager pager .";
+  }
+}
+
+body.path-frontpage,
+body.not-frontpage.path-events  {
     & header {
         grid-area: logo;
         & > img {
@@ -49,6 +64,12 @@ div.is_front {
         display: none;
     }
   }
+body.not-frontpage.path-events  {
+  & nav.pager {
+    grid-area: pager;
+  }
+}
+
 @media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
   div.is_front {
     & .views-element-container > div {

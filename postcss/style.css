@@ -2725,27 +2725,33 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"
 	outline: none;
   border-color: #00aeef;
 }
-div.is_front {
-  /* width: 100%; */
-  }
-div.is_front .views-element-container > div {
+body.path-frontpage .views-element-container > div {
   display: grid;
   grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
   grid-template-rows: 2vh 600px;
   grid-template-areas:
-        ".  .    .        ."
-        ".  logo content .";
+    ".  .    .        ."
+    ".  logo content .";
 }
-div.is_front header {
+body.not-frontpage.path-events .views-element-container > div {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+  grid-template-rows: 2vh 600px;
+  grid-template-areas:
+    ".  .    .        ."
+    ".  logo content ."
+    ".  pager pager .";
+}
+body.path-frontpage header, body.not-frontpage.path-events header {
   grid-area: logo;
 }
-div.is_front header > img {
+body.path-frontpage header > img, body.not-frontpage.path-events header > img {
   max-height: 55vh;
 }
-div.is_front .front_page_content {
+body.path-frontpage .front_page_content, body.not-frontpage.path-events .front_page_content {
   grid-area: content;
 }
-div.is_front .front-row {
+body.path-frontpage .front-row, body.not-frontpage.path-events .front-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2754,34 +2760,43 @@ div.is_front .front-row {
   padding-top: 16px;
   padding-top: 1rem;
 }
-div.is_front .front-row h3 {
+body.path-frontpage .front-row h3, body.not-frontpage.path-events .front-row h3 {
   /*font-family: stamPeteRegular; */
   margin-top: 0;
   font-family: stamPeteRegular;
   font-weight: 300;
   line-height: 1.1;
 }
-div.is_front .front-row h3 > a {
+body.path-frontpage .front-row h3 > a, body.not-frontpage.path-events .front-row h3 > a {
   color: rgb(0, 137, 188);
 }
-div.is_front .front-text {
+body.path-frontpage .front-text, body.not-frontpage.path-events .front-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-div.is_front .front-media.thumbscrubber,
-    div.is_front .front-row video,
-    div.is_front .front-media img  {
+body.path-frontpage .front-media.thumbscrubber,
+    body.path-frontpage .front-row video,
+    body.path-frontpage .front-media img,
+    body.not-frontpage.path-events .front-media.thumbscrubber,
+    body.not-frontpage.path-events .front-row video,
+    body.not-frontpage.path-events .front-media img  {
   width: 0;
 }
-div.is_front .front-text > h3 {
+body.path-frontpage .front-text > h3, body.not-frontpage.path-events .front-text > h3 {
   padding-left: 32px;
   padding-left: 2rem;
 }
-div.is_front .front-row video,
-    div.is_front .front-text > p,
-    div.is_front .front-media img {
+body.path-frontpage .front-row video,
+    body.path-frontpage .front-text > p,
+    body.path-frontpage .front-media img,
+    body.not-frontpage.path-events .front-row video,
+    body.not-frontpage.path-events .front-text > p,
+    body.not-frontpage.path-events .front-media img {
   display: none;
+}
+body.not-frontpage.path-events nav.pager {
+  grid-area: pager;
 }
 @media screen and (min-height: 321px) {
   div.is_front .views-element-container > div {
@@ -2819,10 +2834,10 @@ div.is_front .front-row video,
     width: 220px;
   }
 }
-div.is_not_front {
+div.not-frontpage-DEBUG {
   width: 100%
 }
-div.is_not_front #page > main {
+div.not-frontpage-DEBUG #page > main {
   max-width: 1200px;
   padding-top: 8px;
   padding-top: 0.5rem;
@@ -2839,7 +2854,7 @@ div.is_not_front #page > main {
       -ms-flex-align: start;
           align-items: start;
 }
-div.is_not_front #page > main > .layout-content {
+div.not-frontpage-DEBUG #page > main > .layout-content {
   /*width: 70%;
       min-width: var(--container-max-width-xxs);
       max-width: var(--container-max-width-xs); */
@@ -2849,88 +2864,16 @@ div.is_not_front #page > main > .layout-content {
   padding: 0 8px;
   padding: 0 0.5rem;
 }
-div.is_not_front #page > main > footer > .region_footer {
+div.not-frontpage-DEBUG #page > main > footer > .region_footer {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
-div.is_not_front #page > main div.region_content img,
-    div.is_not_front #page > main div.region_content footer img {
+div.not-frontpage-DEBUG #page > main div.region_content img,
+    div.not-frontpage-DEBUG #page > main div.region_content footer img {
   border: 1px solid #686868;
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;
 }
-div.is_not_front .views-element-container > div {
-  display: grid;
-  grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-  grid-template-rows: 2vh 600px;
-  grid-template-areas:
-        ".  .    .       ."
-        ".  logo content ."
-        ".  .    pager   .";
-}
-div.is_not_front header {
-  grid-area: logo;
-}
-div.is_not_front header > img {
-  max-height: 55vh;
-}
-div.is_not_front .events_page_content {
-  grid-area: content;
-}
-div.is_not_front nav {
-  grid-area: pager;
-}
-div.is_not_front .front-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 32px;
-  padding-left: 2rem;
-  padding-top: 16px;
-  padding-top: 1rem;
-}
-div.is_not_front .front-row h3 {
-  /*font-family: stamPeteRegular; */
-  margin-top: 0;
-  font-family: stamPeteRegular;
-  font-weight: 300;
-  line-height: 1.1;
-}
-div.is_not_front .front-row h3 > a {
-  color: rgb(0, 137, 188);
-}
-div.is_not_front .front-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-div.is_not_front .front-media.thumbscrubber,
-    div.is_not_front .front-row video,
-    div.is_not_front .front-media img  {
-  width: 0;
-}
-div.is_not_front .front-text > h3 {
-  padding-left: 32px;
-  padding-left: 2rem;
-}
-div.is_not_front .front-row video,
-    div.is_not_front .front-text > p,
-    div.is_not_front .front-media img {
-  display: none;
-}
-/* @media screen and (--exceeds-iPad-Landscape-width) {
-  div.is_not_front {
-    & #page > main {
-      & > .layout-content {
-        width: 70%;
-        min-width: var(--container-max-width-xs);
-        max-width: var(--container-max-width-lg);
-        flex-grow: 4;
-        padding: 5vh 0.5rem 0 0.5rem;
-      }
-    }
-  }
-} */
 /*! Alerts */
 .alert {
   color: white;
