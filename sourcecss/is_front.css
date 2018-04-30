@@ -1,13 +1,7 @@
 div.is_front {
-  width: 100%;
+  /* width: 100%; */
   & .views-element-container > div {
-      /* margin: 1rem 1rem var(--front-views-element-container-bottom-margin) 1rem; */
-      /* max-height: 70%; */
       display: grid;
-      /* grid-template-rows: auto; */
-      /* grid-gap: 0.5rem; */
-      /* align-items: center; */
-      /* justify-items: left; */
       grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
       grid-template-rows: 2vh 600px;
       grid-template-areas:
@@ -20,15 +14,6 @@ div.is_front {
             max-height: 55vh;
         }
     }
-    /* & main {
-      position: relative;
-      height: 90vh;
-    }
-    & .layout-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-    } */
     & .front_page_content {
           grid-area: content;
       }
@@ -64,20 +49,20 @@ div.is_front {
         display: none;
     }
   }
-  @media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
-    div.is_front {
-      & .views-element-container > div {
-          margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
-        }
+@media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
+  div.is_front {
+    & .views-element-container > div {
+        margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
-  }
-  @media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
-    div.is_front {
-      & .views-element-container > div {
-          margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
-        }
+    }
+}
+@media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
+  div.is_front {
+    & .views-element-container > div {
+        margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
-  }
+    }
+}
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
     & .views-element-container > div {

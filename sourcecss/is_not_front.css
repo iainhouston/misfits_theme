@@ -9,9 +9,9 @@ div.is_not_front {
     justify-content: space-between;
     align-items: start;
     & > .layout-content {
-      width: 70%;
+      /* width: 70%;
       min-width: var(--container-max-width-xxs);
-      max-width: var(--container-max-width-xs);
+      max-width: var(--container-max-width-xs); */
       flex-grow: 4;
       padding: 0 0.5rem;
     }
@@ -24,6 +24,58 @@ div.is_not_front {
       box-shadow: 3px 3px 4px 2px var(--colour-misfits-light-grey);
     }
   }
+  & .views-element-container > div {
+      display: grid;
+      grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+      grid-template-rows: 2vh 600px;
+      grid-template-areas:
+        ".  .    .       ."
+        ".  logo content ."
+        ".  .    pager   .";
+    }
+    & header {
+        grid-area: logo;
+        & > img {
+            max-height: 55vh;
+        }
+    }
+    & .events_page_content {
+          grid-area: content;
+      }
+    & nav {
+            grid-area: pager;
+      }
+    & .front-row {
+        display: flex;
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+    & .front-row h3 {
+        /* font-family: stamPeteRegular; */
+        margin-top: 0;
+        font-family: var(--headings-font-family);
+        font-weight: var(--headings-font-weight);
+        line-height: var(--headings-line-height);
+        & > a {
+          color: var(--misfits-logo-blue);
+        }
+    }
+    & .front-text {
+      flex: 1;
+    }
+    & .front-media.thumbscrubber,
+    & .front-row video,
+    & .front-media img  {
+      width: 0;
+    }
+    & .front-text > h3 {
+        padding-left: 2rem;
+    }
+    & .front-row video,
+    & .front-text > p,
+    & .front-media img {
+        display: none;
+    }
 }
 
 /* @media screen and (--exceeds-iPad-Landscape-width) {
