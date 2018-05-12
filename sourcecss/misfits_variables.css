@@ -2,6 +2,7 @@
   /* TODO: Iain: Harmonise with Shoelace*/
   --colour-misfits-blue: #00aeef;
   --colour-misfits-lighter-blue: #99e4ff;
+  --colour-misfits-darker-blue: rgb(0, 137, 188);
   --colour-misfits-darker-grey: #404040;
   --colour-misfits-dark-grey: Gray;
   --colour-misfits-grey: #58585A;
@@ -15,7 +16,7 @@
   --misfits-logo-grey: rgb(88, 88, 90);
   --misfits-light-grey: rgb(230, 230, 230);
   --misfits-light-grey-transparent: rgba(230, 230, 230, 0.85);
-  --misfits-logo-blue: rgb(0, 137, 188);
+  --misfits-logo-blue: var(--colour-misfits-darker-blue);
 
   --layout-container-top-margin: 4rem;
   --layout-container-bottom-margin: 4rem;

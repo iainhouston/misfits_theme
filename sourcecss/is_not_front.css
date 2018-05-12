@@ -1,4 +1,4 @@
-div.not-frontpage-DEBUG {
+body.not-frontpage.path-node {
   width: 100%;
   & #page > main {
     max-width: var(--container-max-width-xl);
@@ -9,9 +9,9 @@ div.not-frontpage-DEBUG {
     justify-content: space-between;
     align-items: start;
     & > .layout-content {
-      /* width: 70%;
+      width: 70%;
       min-width: var(--container-max-width-xxs);
-      max-width: var(--container-max-width-xs); */
+      max-width: var(--container-max-width-xs);
       flex-grow: 4;
       padding: 0 0.5rem;
     }

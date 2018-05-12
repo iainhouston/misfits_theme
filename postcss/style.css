@@ -2731,27 +2731,29 @@ body.path-frontpage .views-element-container > div {
   grid-template-rows: 2vh 600px;
   grid-template-areas:
     ".  .    .        ."
-    ".  logo content .";
+    ".  logo content  .";
 }
-body.not-frontpage.path-events .views-element-container > div {
+body.not-frontpage.path-events-page .views-element-container > div {
   display: grid;
   grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-  grid-template-rows: 2vh 600px;
   grid-template-areas:
-    ".  .    .        ."
-    ".  logo content ."
-    ".  pager pager .";
+    ".  .      .         ."
+    ".  logo   content   ."
+    ".  .      pager     .";
 }
-body.path-frontpage header, body.not-frontpage.path-events header {
+body.path-frontpage header, body.not-frontpage.path-events-page .layout-content header {
   grid-area: logo;
 }
-body.path-frontpage header > img, body.not-frontpage.path-events header > img {
+body.path-frontpage header > img, body.not-frontpage.path-events-page .layout-content header > img {
   max-height: 55vh;
 }
-body.path-frontpage .front_page_content, body.not-frontpage.path-events .front_page_content {
+body.path-frontpage .front_page_content,
+    body.path-frontpage .events_page_content,
+    body.not-frontpage.path-events-page .layout-content .front_page_content,
+    body.not-frontpage.path-events-page .layout-content .events_page_content {
   grid-area: content;
 }
-body.path-frontpage .front-row, body.not-frontpage.path-events .front-row {
+body.path-frontpage .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2760,17 +2762,17 @@ body.path-frontpage .front-row, body.not-frontpage.path-events .front-row {
   padding-top: 16px;
   padding-top: 1rem;
 }
-body.path-frontpage .front-row h3, body.not-frontpage.path-events .front-row h3 {
+body.path-frontpage .front-row h3, body.not-frontpage.path-events-page .layout-content .front-row h3 {
   /*font-family: stamPeteRegular; */
   margin-top: 0;
   font-family: stamPeteRegular;
   font-weight: 300;
   line-height: 1.1;
 }
-body.path-frontpage .front-row h3 > a, body.not-frontpage.path-events .front-row h3 > a {
+body.path-frontpage .front-row h3 > a, body.not-frontpage.path-events-page .layout-content .front-row h3 > a {
   color: rgb(0, 137, 188);
 }
-body.path-frontpage .front-text, body.not-frontpage.path-events .front-text {
+body.path-frontpage .front-text, body.not-frontpage.path-events-page .layout-content .front-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2778,66 +2780,92 @@ body.path-frontpage .front-text, body.not-frontpage.path-events .front-text {
 body.path-frontpage .front-media.thumbscrubber,
     body.path-frontpage .front-row video,
     body.path-frontpage .front-media img,
-    body.not-frontpage.path-events .front-media.thumbscrubber,
-    body.not-frontpage.path-events .front-row video,
-    body.not-frontpage.path-events .front-media img  {
+    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
+    body.not-frontpage.path-events-page .layout-content .front-row video,
+    body.not-frontpage.path-events-page .layout-content .front-media img  {
   width: 0;
 }
-body.path-frontpage .front-text > h3, body.not-frontpage.path-events .front-text > h3 {
+body.path-frontpage .front-text > h3, body.not-frontpage.path-events-page .layout-content .front-text > h3 {
   padding-left: 32px;
   padding-left: 2rem;
 }
 body.path-frontpage .front-row video,
     body.path-frontpage .front-text > p,
     body.path-frontpage .front-media img,
-    body.not-frontpage.path-events .front-row video,
-    body.not-frontpage.path-events .front-text > p,
-    body.not-frontpage.path-events .front-media img {
+    body.not-frontpage.path-events-page .layout-content .front-row video,
+    body.not-frontpage.path-events-page .layout-content .front-text > p,
+    body.not-frontpage.path-events-page .layout-content .front-media img {
   display: none;
 }
-body.not-frontpage.path-events nav.pager {
+body.not-frontpage.path-events-page .layout-content nav.pager {
   grid-area: pager;
 }
+body.not-frontpage.path-events-page .layout-content nav.pager ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item {
+  display: block;
+  width: auto;
+  padding-right: 4px;
+  padding-right: 0.25rem;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item::after {
+  color: #00aeef;
+  content: " : ";
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item.is-active > a {
+  color: Gray;
+}
 @media screen and (min-height: 321px) {
-  div.is_front .views-element-container > div {
+  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
     margin: 2rem 1rem 4rem 1rem;
   }
 }
 @media screen and (min-height: 414px) {
-  div.is_front .views-element-container > div {
+  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
     margin: 4rem 1rem 4rem 1rem;
   }
 }
 @media screen and (min-width: 668px) and (min-height: 654px)  {
-  div.is_front .views-element-container > div {
+  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
     margin: 2rem 1rem 4rem 1rem;
   }
-  div.is_front .front-row {
+  div.is_front .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
     height: 180px;
     max-width: 50rem;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
     div.is_front .front-media img,
-    div.is_front .front-media {
+    div.is_front .front-media,
+    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
+    body.not-frontpage.path-events-page .layout-content .front-row video,
+    body.not-frontpage.path-events-page .layout-content .front-media img,
+    body.not-frontpage.path-events-page .layout-content .front-media {
     width: 220px;
   }
-  div.is_front .front-text > p {
+  div.is_front .front-text > p, body.not-frontpage.path-events-page .layout-content .front-text > p {
     padding-left: 2rem;
     display: block;
     overflow: hidden;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
-    div.is_front .front-media img {
+    div.is_front .front-media img,
+    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
+    body.not-frontpage.path-events-page .layout-content .front-row video,
+    body.not-frontpage.path-events-page .layout-content .front-media img {
     display: block;
     width: 220px;
   }
 }
-div.not-frontpage-DEBUG {
+body.not-frontpage.path-node {
   width: 100%
 }
-div.not-frontpage-DEBUG #page > main {
+body.not-frontpage.path-node #page > main {
   max-width: 1200px;
   padding-top: 8px;
   padding-top: 0.5rem;
@@ -2854,22 +2882,22 @@ div.not-frontpage-DEBUG #page > main {
       -ms-flex-align: start;
           align-items: start;
 }
-div.not-frontpage-DEBUG #page > main > .layout-content {
-  /*width: 70%;
-      min-width: var(--container-max-width-xxs);
-      max-width: var(--container-max-width-xs); */
+body.not-frontpage.path-node #page > main > .layout-content {
+  width: 70%;
+  min-width: 319px;
+  max-width: 575px;
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
   padding: 0 8px;
   padding: 0 0.5rem;
 }
-div.not-frontpage-DEBUG #page > main > footer > .region_footer {
+body.not-frontpage.path-node #page > main > footer > .region_footer {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
-div.not-frontpage-DEBUG #page > main div.region_content img,
-    div.not-frontpage-DEBUG #page > main div.region_content footer img {
+body.not-frontpage.path-node #page > main div.region_content img,
+    body.not-frontpage.path-node #page > main div.region_content footer img {
   border: 1px solid #686868;
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;

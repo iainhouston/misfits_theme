@@ -5,31 +5,31 @@ body.path-frontpage {
     grid-template-rows: 2vh 600px;
     grid-template-areas:
     ".  .    .        ."
-    ".  logo content .";
+    ".  logo content  .";
   }
 }
 
-body.not-frontpage.path-events {
+body.not-frontpage.path-events-page {
   & .views-element-container > div {
     display: grid;
     grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-    grid-template-rows: 2vh 600px;
     grid-template-areas:
-    ".  .    .        ."
-    ".  logo content ."
-    ".  pager pager .";
+    ".  .      .         ."
+    ".  logo   content   ."
+    ".  .      pager     .";
   }
 }
 
 body.path-frontpage,
-body.not-frontpage.path-events  {
+body.not-frontpage.path-events-page .layout-content {
     & header {
         grid-area: logo;
         & > img {
             max-height: 55vh;
         }
     }
-    & .front_page_content {
+    & .front_page_content,
+    & .events_page_content {
           grid-area: content;
       }
     & .front-row {
@@ -64,28 +64,44 @@ body.not-frontpage.path-events  {
         display: none;
     }
   }
-body.not-frontpage.path-events  {
+body.not-frontpage.path-events-page .layout-content  {
   & nav.pager {
     grid-area: pager;
+    & ul {
+      list-style: none;
+      display: inline-flex;
+      & > li.pager__item {
+        display: block;
+        width: auto;
+        padding-right: 0.25rem;
+        &::after {
+          color: var(--colour-misfits-blue);
+          content: " : ";
+        }
+      }
+      & > li.pager__item.is-active > a {
+        color: var(--colour-misfits-dark-grey);
+      }
+    }
   }
 }
 
 @media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
-  div.is_front {
+  div.is_front, body.not-frontpage.path-events-page .layout-content {
     & .views-element-container > div {
         margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
     }
 }
 @media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
-  div.is_front {
+  div.is_front, body.not-frontpage.path-events-page .layout-content {
     & .views-element-container > div {
         margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
     }
 }
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
-  div.is_front {
+  div.is_front, body.not-frontpage.path-events-page .layout-content {
     & .views-element-container > div {
       margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
     }
