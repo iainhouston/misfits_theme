@@ -47,10 +47,6 @@ function misfitsv4_preprocess_views_view_fields(&$variables) {
 
   if (isset($variables['fields']['field_video'])) {
     unset($variables['fields']['field_photo_gallery']);
-    unset($variables['fields']['field_image']);
-  }
-  if (isset($variables['fields']['field_photo_gallery'])) {
-    unset($variables['fields']['field_image']);
   }
 
 }
