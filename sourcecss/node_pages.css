@@ -15,12 +15,9 @@ body.not-frontpage.path-node {
       flex-grow: 4;
       padding: 0 0.5rem;
     }
-    & > footer > .region_footer {
-      padding: 0.5rem 0;
-    }
     & div.region_content img,
     & div.region_content footer img {
-      border: 1px solid var(--colour-misfits-mid-grey);
+      border: 1px solid var(--colour-misfits-light-grey);
       box-shadow: 3px 3px 4px 2px var(--colour-misfits-light-grey);
     }
   }
@@ -39,10 +36,13 @@ body.not-frontpage.path-node {
       display: block;
       margin: 0 auto;
       }
+      & div.field__item > a > img[alt^="Default Misfits Poster image"] {
+        display: none;
+      }
     }
     & > footer  {
       padding-top: 1rem;
-      border-top: 1px solid var(--colour-misfits-mid-grey);
+      border-top: 1px solid var(--colour-misfits-light-grey);
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--colour-misfits-mid-grey);
       margin-top: 1rem;

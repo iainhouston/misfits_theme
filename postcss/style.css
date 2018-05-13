@@ -454,8 +454,8 @@ big {
   font-size: 1.25rem;
 }
 blockquote {
-  font-size: 20px;
-  font-size: 1.25rem;
+  /* font-size: var(--font-size-big); */
+  font-style: italic;
   border-left: solid 6.4px #ddd;
   border-left: solid .4rem #ddd;
   padding: 8px 8px 8px 16px;
@@ -614,8 +614,8 @@ ul ul {
   #page > footer > .region_footer {
   max-width: 1199px;
   margin: 0 auto;
-  padding: 0 8px;
-  padding: 0 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
 }
 /*
   Header with social media links from icons
@@ -2737,9 +2737,9 @@ body.not-frontpage.path-events-page .views-element-container > div {
   display: grid;
   grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
   grid-template-areas:
-    ".  .      .         ."
-    ".  logo   content   ."
-    ".  .      pager     .";
+    ".    .         ."
+    ".    content   ."
+    ".    pager     .";
 }
 body.path-frontpage header, body.not-frontpage.path-events-page .layout-content header {
   grid-area: logo;
@@ -2761,6 +2761,8 @@ body.path-frontpage .front-row, body.not-frontpage.path-events-page .layout-cont
   padding-left: 2rem;
   padding-top: 16px;
   padding-top: 1rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 body.path-frontpage .front-row h3, body.not-frontpage.path-events-page .layout-content .front-row h3 {
   /*font-family: stamPeteRegular; */
@@ -2797,7 +2799,12 @@ body.path-frontpage .front-row video,
     body.not-frontpage.path-events-page .layout-content .front-media img {
   display: none;
 }
+body.not-frontpage.path-events-page .layout-content .front-row {
+  border-top: 1px solid lightgrey;
+}
 body.not-frontpage.path-events-page .layout-content nav.pager {
+  margin-top: 16px;
+  margin-top: 1rem;
   grid-area: pager;
 }
 body.not-frontpage.path-events-page .layout-content nav.pager ul {
@@ -2836,6 +2843,9 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
   div.is_front .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
     height: 180px;
     max-width: 50rem;
+  }
+  div.is_front .front-row > a > img, body.not-frontpage.path-events-page .layout-content .front-row > a > img {
+    height: 100%;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
@@ -2895,13 +2905,9 @@ body.not-frontpage.path-node #page > main > .layout-content {
   padding: 0 8px;
   padding: 0 0.5rem;
 }
-body.not-frontpage.path-node #page > main > footer > .region_footer {
-  padding: 8px 0;
-  padding: 0.5rem 0;
-}
 body.not-frontpage.path-node #page > main div.region_content img,
     body.not-frontpage.path-node #page > main div.region_content footer img {
-  border: 1px solid #686868;
+  border: 1px solid lightgrey;
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;
 }
@@ -2920,10 +2926,13 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full div
   display: block;
   margin: 0 auto;
 }
+body.not-frontpage.path-node article.node--type-article.node--view-mode-full div.field--name-field-newsletter-image div.field__item > a > img[alt^="Default Misfits Poster image"] {
+  display: none;
+}
 body.not-frontpage.path-node article.node--type-article.node--view-mode-full > footer  {
   padding-top: 16px;
   padding-top: 1rem;
-  border-top: 1px solid #686868;
+  border-top: 1px solid lightgrey;
   padding-bottom: 16px;
   padding-bottom: 1rem;
   border-bottom: 1px solid #686868;
