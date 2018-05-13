@@ -127,4 +127,9 @@ body.not-frontpage.path-events-page .layout-content  {
         width: 220px;
     }
   }
+  body.not-frontpage.path-events-page .layout-content {
+    & .front-row {
+        height: var(--events-row-height);
+      }
+  }
 }
