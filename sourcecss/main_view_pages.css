@@ -34,7 +34,6 @@ body.not-frontpage.path-events-page .layout-content {
       }
     & .front-row {
         display: flex;
-        padding-left: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -111,10 +110,12 @@ body.not-frontpage.path-events-page .layout-content  {
       margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
     }
     & .front-row {
+        padding-left: 2rem;
         height: var(--front-row-height);
-        max-width: 50rem;
+        max-width: 70rem;
         & > a > img {
           height: 100%;
+          width: auto;
         }
     }
     & .front-media.thumbscrubber,
@@ -122,9 +123,10 @@ body.not-frontpage.path-events-page .layout-content  {
     & .front-media img ,
     & .front-media {
       width: 220px;
+      height: 124px;
     }
     & .front-text > p {
-        padding-left: 2rem;
+        padding: 0 1.5rem;
         display: block;
         overflow: hidden;
     }
@@ -133,6 +135,8 @@ body.not-frontpage.path-events-page .layout-content  {
     & .front-media img {
         display: block;
         width: 220px;
+        height: 124px;
+        margin: auto 0;;
     }
   }
   body.not-frontpage.path-events-page .layout-content {

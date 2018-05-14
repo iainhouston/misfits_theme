@@ -2757,8 +2757,6 @@ body.path-frontpage .front-row, body.not-frontpage.path-events-page .layout-cont
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 32px;
-  padding-left: 2rem;
   padding-top: 16px;
   padding-top: 1rem;
   padding-bottom: 16px;
@@ -2841,11 +2839,13 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
     margin: 2rem 1rem 4rem 1rem;
   }
   div.is_front .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
+    padding-left: 2rem;
     height: 180px;
-    max-width: 50rem;
+    max-width: 70rem;
   }
   div.is_front .front-row > a > img, body.not-frontpage.path-events-page .layout-content .front-row > a > img {
     height: 100%;
+    width: auto;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
@@ -2856,9 +2856,10 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
     body.not-frontpage.path-events-page .layout-content .front-media img,
     body.not-frontpage.path-events-page .layout-content .front-media {
     width: 220px;
+    height: 124px;
   }
   div.is_front .front-text > p, body.not-frontpage.path-events-page .layout-content .front-text > p {
-    padding-left: 2rem;
+    padding: 0 1.5rem;
     display: block;
     overflow: hidden;
   }
@@ -2870,6 +2871,8 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
     body.not-frontpage.path-events-page .layout-content .front-media img {
     display: block;
     width: 220px;
+    height: 124px;
+    margin: auto 0;
   }
   body.not-frontpage.path-events-page .layout-content .front-row {
     height: 235px;
