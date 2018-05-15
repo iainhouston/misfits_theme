@@ -2945,8 +2945,12 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
 body.not-frontpage.path-node {
   width: 100%
 }
+body.not-frontpage.path-node #page > main .layout-content {
+  margin: 0 8px;
+  margin: 0 0.5rem;
+  max-width: 100%;
+}
 body.not-frontpage.path-node #page > main {
-  max-width: 1200px;
   padding-top: 8px;
   padding-top: 0.5rem;
   margin: 0 auto;
@@ -2963,20 +2967,36 @@ body.not-frontpage.path-node #page > main {
           align-items: start;
 }
 body.not-frontpage.path-node #page > main > .layout-content {
-  width: 70%;
-  min-width: 319px;
-  max-width: 575px;
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
   padding: 0 8px;
   padding: 0 0.5rem;
 }
+body.not-frontpage.path-node #page > main > .layout-content #block-misfitsv4-page-title {
+  text-align: center;
+}
 body.not-frontpage.path-node #page > main div.region_content img,
     body.not-frontpage.path-node #page > main div.region_content footer img {
   border: 1px solid lightgrey;
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;
+}
+body.not-frontpage.path-node article.node--type-article.node--view-mode-full {
+  /*width: 90%; */
+}
+body.not-frontpage.path-node article.node--type-article.node--view-mode-full > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 body.not-frontpage.path-node article.node--type-article.node--view-mode-full div.field--name-field-newsletter-image div.field__label {
   font-family: stamPeteRegular;
@@ -3007,6 +3027,20 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > f
   margin-top: 1rem;
   margin-bottom: 16px;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 668px) {
+  body.not-frontpage.path-node article.node--type-article.node--view-mode-full div > div.field--name-field-photo-gallery,
+      body.not-frontpage.path-node article.node--type-article.node--view-mode-full div > div.field--name-body {
+    display: block;
+    width: 90%;
+    max-width: 40rem;
+    padding-bottom: 2rem;
+  }
+  body.not-frontpage.path-node article.node--type-article.node--view-mode-full div > div.field--name-field-newsletter-image {
+    width: 330px;
+    height: 440px;
+    margin: auto 0;
+  }
 }
 /*! Alerts */
 .alert {

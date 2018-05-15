@@ -1,7 +1,10 @@
 body.not-frontpage.path-node {
   width: 100%;
   & #page > main {
-    max-width: var(--container-max-width-xl);
+    & .layout-content {
+      margin: 0 0.5rem;
+      max-width: 100%;
+    }
     padding-top: 0.5rem;
     margin: 0 auto;
     display: flex;
@@ -9,11 +12,11 @@ body.not-frontpage.path-node {
     justify-content: space-between;
     align-items: start;
     & > .layout-content {
-      width: 70%;
-      min-width: var(--container-max-width-xxs);
-      max-width: var(--container-max-width-xs);
       flex-grow: 4;
       padding: 0 0.5rem;
+      & #block-misfitsv4-page-title {
+        text-align: center;
+      }
     }
     & div.region_content img,
     & div.region_content footer img {
@@ -22,6 +25,13 @@ body.not-frontpage.path-node {
     }
   }
   & article.node--type-article.node--view-mode-full {
+    /* width: 90%; */
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+    }
     & div.field--name-field-newsletter-image {
       & div.field__label {
         font-family: var(--headings-font-family);
@@ -47,6 +57,24 @@ body.not-frontpage.path-node {
       border-bottom: 1px solid var(--colour-misfits-mid-grey);
       margin-top: 1rem;
       margin-bottom: 1rem;
+    }
+  }
+}
+@media screen and (--exceeds-iPhone-6s-Landscape-width) {
+  body.not-frontpage.path-node {
+    & article.node--type-article.node--view-mode-full {
+      & div > div.field--name-field-photo-gallery,
+      & div > div.field--name-body {
+        display: block;
+        width: 90%;
+        max-width: 40rem;
+        padding-bottom: 2rem;
+      }
+      & div > div.field--name-field-newsletter-image {
+        width: 330px;
+        height: 440px;
+        margin: auto 0;
+      }
     }
   }
 }
