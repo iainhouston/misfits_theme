@@ -2797,19 +2797,24 @@ body.path-frontpage .front-row video,
     body.not-frontpage.path-events-page .layout-content .front-media img {
   display: none;
 }
+body.not-frontpage.path-events-page .layout-content .events_page_content {
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgrey;
+}
 body.not-frontpage.path-events-page .layout-content .front-row {
   border-top: 1px solid lightgrey;
 }
 body.not-frontpage.path-events-page .layout-content nav.pager {
-  margin-top: 16px;
-  margin-top: 1rem;
+  margin: 32px auto 0 auto;
+  margin: 2rem auto 0 auto;
   grid-area: pager;
 }
 body.not-frontpage.path-events-page .layout-content nav.pager ul {
   list-style: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item {
   display: block;
@@ -2817,11 +2822,7 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
   padding-right: 4px;
   padding-right: 0.25rem;
 }
-body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item::after {
-  color: #00aeef;
-  content: " : ";
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item.is-active > a {
+body.not-frontpage.path-events-page .layout-content nav.pager > li.pager__item.is-active > a {
   color: Gray;
 }
 @media screen and (min-height: 321px) {
@@ -2835,47 +2836,56 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
   }
 }
 @media screen and (min-width: 668px) and (min-height: 654px)  {
-  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
+  div.is_front .views-element-container > div {
     margin: 2rem 1rem 4rem 1rem;
   }
-  div.is_front .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
+  div.is_front .front-row {
     padding-left: 2rem;
     height: 180px;
     max-width: 70rem;
   }
-  div.is_front .front-row > a > img, body.not-frontpage.path-events-page .layout-content .front-row > a > img {
+  div.is_front .front-row > a > img {
     height: 100%;
     width: auto;
   }
-  div.is_front .front-media.thumbscrubber,
-    div.is_front .front-row video,
-    div.is_front .front-media img,
-    div.is_front .front-media,
-    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
-    body.not-frontpage.path-events-page .layout-content .front-row video,
-    body.not-frontpage.path-events-page .layout-content .front-media img,
-    body.not-frontpage.path-events-page .layout-content .front-media {
-    width: 220px;
-    height: 124px;
-  }
-  div.is_front .front-text > p, body.not-frontpage.path-events-page .layout-content .front-text > p {
+  div.is_front .front-text > p {
     padding: 0 1.5rem;
     display: block;
     overflow: hidden;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
-    div.is_front .front-media img,
-    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
-    body.not-frontpage.path-events-page .layout-content .front-row video,
-    body.not-frontpage.path-events-page .layout-content .front-media img {
+    div.is_front .front-media img {
     display: block;
     width: 220px;
     height: 124px;
     margin: auto 0;
   }
+}
+@media screen and (min-width: 321px) {
+  body.not-frontpage.path-events-page .layout-content  li.pager__item::after {
+    color: #00aeef;
+    content: " : ";
+  }
+}
+@media screen and (min-width: 668px) {
   body.not-frontpage.path-events-page .layout-content .front-row {
-    height: 235px;
+    height: 255px;
+  }
+  body.not-frontpage.path-events-page .layout-content .front-row .front-text > p {
+    padding: 0 1.5rem;
+    display: block;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body.not-frontpage.path-events-page .layout-content .front-row .front-media.thumbscrubber,
+      body.not-frontpage.path-events-page .layout-content .front-row .front-row video,
+      body.not-frontpage.path-events-page .layout-content .front-row .front-media img {
+    display: block;
+    width: 220px;
+    height: 124px;
+    margin: auto 0;
   }
 }
 body.not-frontpage.path-node {

@@ -65,22 +65,23 @@ body.not-frontpage.path-events-page .layout-content {
     }
   }
 body.not-frontpage.path-events-page .layout-content  {
+  & .events_page_content {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--colour-misfits-light-grey);
+  }
   & .front-row {
     border-top: 1px solid var(--colour-misfits-light-grey);
   }
   & nav.pager {
-    margin-top: 1rem;
+    margin: 2rem auto 0 auto;
     grid-area: pager;
     & ul {
       list-style: none;
-      display: inline-flex;
+      display: flex;
       & > li.pager__item {
         display: block;
         width: auto;
         padding-right: 0.25rem;
-        &::after {
-          color: var(--colour-misfits-blue);
-          content: " : ";
         }
       }
       & > li.pager__item.is-active > a {
@@ -88,7 +89,7 @@ body.not-frontpage.path-events-page .layout-content  {
       }
     }
   }
-}
+
 
 @media screen and (--exceeds-Nokia-Lumia-520-landscape-height) {
   div.is_front, body.not-frontpage.path-events-page .layout-content {
@@ -105,7 +106,7 @@ body.not-frontpage.path-events-page .layout-content  {
     }
 }
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
-  div.is_front, body.not-frontpage.path-events-page .layout-content {
+  div.is_front {
     & .views-element-container > div {
       margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
     }
@@ -117,13 +118,6 @@ body.not-frontpage.path-events-page .layout-content  {
           height: 100%;
           width: auto;
         }
-    }
-    & .front-media.thumbscrubber,
-    & .front-row video,
-    & .front-media img ,
-    & .front-media {
-      width: 220px;
-      height: 124px;
     }
     & .front-text > p {
         padding: 0 1.5rem;
@@ -139,9 +133,38 @@ body.not-frontpage.path-events-page .layout-content  {
         margin: auto 0;;
     }
   }
+}
+@media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
+  body.not-frontpage.path-events-page .layout-content {
+    &  li.pager__item::after {
+        color: var(--colour-misfits-blue);
+        content: " : ";
+      }
+  }
+}
+@media screen and (--exceeds-iPhone-6s-Landscape-width) {
   body.not-frontpage.path-events-page .layout-content {
     & .front-row {
-        height: var(--events-row-height);
+      height: var(--events-row-height);
+      & .front-text > p {
+          padding: 0 1.5rem;
+          display: block;
+          overflow: hidden;
       }
+    }
+  }
+}
+@media screen and (--exceeds-iPad-Landscape-width) {
+  body.not-frontpage.path-events-page .layout-content {
+    & .front-row {
+      & .front-media.thumbscrubber,
+      & .front-row video,
+      & .front-media img {
+          display: block;
+          width: 220px;
+          height: 124px;
+          margin: auto 0;;
+      }
+    }
   }
 }
