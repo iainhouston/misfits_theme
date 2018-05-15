@@ -1,0 +1,126 @@
+body.not-frontpage.path-events-page {
+  & .views-element-container > div {
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+    grid-template-areas:
+    ".    .         ."
+    ".    content   ."
+    ".    pager     .";
+  }
+}
+
+body.not-frontpage.path-events-page .layout-content {
+  & header {
+      grid-area: logo;
+      & > img {
+          max-height: 55vh;
+      }
+  }
+  & .front_page_content,
+  & .events_page_content {
+      grid-area: content;
+  }
+  & .front-row {
+      display: flex;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top: 1px solid var(--colour-misfits-light-grey);
+  }
+  & .front-row h3 {
+      /* font-family: stamPeteRegular; */
+      margin-top: 0;
+      font-family: var(--headings-font-family);
+      font-weight: var(--headings-font-weight);
+      line-height: var(--headings-line-height);
+      & > a {
+        color: var(--misfits-logo-blue);
+      }
+  }
+  & .front-media.thumbscrubber,
+  & .front-row video,
+  & .front-media img,
+  & .front-poster-image  {
+    width: 0;
+  }
+  & .front-text {
+    flex: 1;
+    margin: auto 0;
+  }
+  & .front-row video,
+  & .front-text > p,
+  & .front-media img,
+  & .front-poster-image {
+      display: none;
+  }
+  & .events_page_content {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--colour-misfits-light-grey);
+  }
+  & nav.pager {
+    margin: 2rem auto 0 auto;
+    grid-area: pager;
+    & ul {
+      list-style: none;
+      display: flex;
+      & > li.pager__item {
+        display: block;
+        width: auto;
+        padding-right: 0.25rem;
+      }
+      & > li.pager__item.is-active > a {
+        color: var(--colour-misfits-dark-grey);
+      }
+    }
+  }
+}
+
+@media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
+  body.not-frontpage.path-events-page .layout-content {
+    & .front-text > p {
+        padding: 0 1.5rem;
+        display: block;
+        overflow: hidden;
+    }
+    & .front-text > h3 {
+        padding-left: 2rem;
+        margin: 0;
+    }
+    &  li.pager__item::after {
+        color: var(--colour-misfits-blue);
+        content: " : ";
+      }
+  }
+}
+
+@media screen and (--exceeds-iPhone-6s-Landscape-width) {
+  body.not-frontpage.path-events-page .layout-content {
+    & .front-row {
+      height: var(--events-row-height);
+      & .front-poster-image {
+        display: block;
+        width: auto;
+        margin: auto 0;
+      }
+      & .front-text > p {
+          padding: 0 1.5rem;
+          display: block;
+          overflow: hidden;
+      }
+
+    }
+  }
+}
+@media screen and (--exceeds-iPad-Portrait-width) {
+  body.not-frontpage.path-events-page .layout-content {
+    & .front-row {
+      & .front-media.thumbscrubber,
+      & .front-row video,
+      & .front-media img {
+          display: block;
+          width: 220px;
+          height: 124px;
+          margin: auto 0;;
+      }
+    }
+  }
+}

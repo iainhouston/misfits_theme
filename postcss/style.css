@@ -2733,27 +2733,16 @@ body.path-frontpage .views-element-container > div {
     ".  .    .        ."
     ".  logo content  .";
 }
-body.not-frontpage.path-events-page .views-element-container > div {
-  display: grid;
-  grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-  grid-template-areas:
-    ".    .         ."
-    ".    content   ."
-    ".    pager     .";
-}
-body.path-frontpage header, body.not-frontpage.path-events-page .layout-content header {
+body.path-frontpage header {
   grid-area: logo;
 }
-body.path-frontpage header > img, body.not-frontpage.path-events-page .layout-content header > img {
+body.path-frontpage header > img {
   max-height: 55vh;
 }
-body.path-frontpage .front_page_content,
-    body.path-frontpage .events_page_content,
-    body.not-frontpage.path-events-page .layout-content .front_page_content,
-    body.not-frontpage.path-events-page .layout-content .events_page_content {
+body.path-frontpage .front_page_content {
   grid-area: content;
 }
-body.path-frontpage .front-row, body.not-frontpage.path-events-page .layout-content .front-row {
+body.path-frontpage .front-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2762,76 +2751,42 @@ body.path-frontpage .front-row, body.not-frontpage.path-events-page .layout-cont
   padding-bottom: 16px;
   padding-bottom: 1rem;
 }
-body.path-frontpage .front-row h3, body.not-frontpage.path-events-page .layout-content .front-row h3 {
+body.path-frontpage .front-row h3 {
   /*font-family: stamPeteRegular; */
   margin-top: 0;
   font-family: stamPeteRegular;
   font-weight: 300;
   line-height: 1.1;
 }
-body.path-frontpage .front-row h3 > a, body.not-frontpage.path-events-page .layout-content .front-row h3 > a {
+body.path-frontpage .front-row h3 > a {
   color: rgb(0, 137, 188);
 }
-body.path-frontpage .front-text, body.not-frontpage.path-events-page .layout-content .front-text {
+body.path-frontpage .front-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 body.path-frontpage .front-media.thumbscrubber,
     body.path-frontpage .front-row video,
-    body.path-frontpage .front-media img,
-    body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
-    body.not-frontpage.path-events-page .layout-content .front-row video,
-    body.not-frontpage.path-events-page .layout-content .front-media img  {
+    body.path-frontpage .front-media img  {
   width: 0;
 }
-body.path-frontpage .front-text > h3, body.not-frontpage.path-events-page .layout-content .front-text > h3 {
+body.path-frontpage .front-text > h3 {
   padding-left: 32px;
   padding-left: 2rem;
 }
 body.path-frontpage .front-row video,
     body.path-frontpage .front-text > p,
-    body.path-frontpage .front-media img,
-    body.not-frontpage.path-events-page .layout-content .front-row video,
-    body.not-frontpage.path-events-page .layout-content .front-text > p,
-    body.not-frontpage.path-events-page .layout-content .front-media img {
+    body.path-frontpage .front-media img {
   display: none;
 }
-body.not-frontpage.path-events-page .layout-content .events_page_content {
-  padding-bottom: 32px;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid lightgrey;
-}
-body.not-frontpage.path-events-page .layout-content .front-row {
-  border-top: 1px solid lightgrey;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager {
-  margin: 32px auto 0 auto;
-  margin: 2rem auto 0 auto;
-  grid-area: pager;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item {
-  display: block;
-  width: auto;
-  padding-right: 4px;
-  padding-right: 0.25rem;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager > li.pager__item.is-active > a {
-  color: Gray;
-}
 @media screen and (min-height: 321px) {
-  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
+  div.is_front .views-element-container > div {
     margin: 2rem 1rem 4rem 1rem;
   }
 }
 @media screen and (min-height: 414px) {
-  div.is_front .views-element-container > div, body.not-frontpage.path-events-page .layout-content .views-element-container > div {
+  div.is_front .views-element-container > div {
     margin: 4rem 1rem 4rem 1rem;
   }
 }
@@ -2862,7 +2817,97 @@ body.not-frontpage.path-events-page .layout-content nav.pager > li.pager__item.i
     margin: auto 0;
   }
 }
+body.not-frontpage.path-events-page .views-element-container > div {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+  grid-template-areas:
+    ".    .         ."
+    ".    content   ."
+    ".    pager     .";
+}
+body.not-frontpage.path-events-page .layout-content header {
+  grid-area: logo;
+}
+body.not-frontpage.path-events-page .layout-content header > img {
+  max-height: 55vh;
+}
+body.not-frontpage.path-events-page .layout-content .front_page_content,
+  body.not-frontpage.path-events-page .layout-content .events_page_content {
+  grid-area: content;
+}
+body.not-frontpage.path-events-page .layout-content .front-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  padding-top: 1rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+  border-top: 1px solid lightgrey;
+}
+body.not-frontpage.path-events-page .layout-content .front-row h3 {
+  /*font-family: stamPeteRegular; */
+  margin-top: 0;
+  font-family: stamPeteRegular;
+  font-weight: 300;
+  line-height: 1.1;
+}
+body.not-frontpage.path-events-page .layout-content .front-row h3 > a {
+  color: rgb(0, 137, 188);
+}
+body.not-frontpage.path-events-page .layout-content .front-media.thumbscrubber,
+  body.not-frontpage.path-events-page .layout-content .front-row video,
+  body.not-frontpage.path-events-page .layout-content .front-media img,
+  body.not-frontpage.path-events-page .layout-content .front-poster-image  {
+  width: 0;
+}
+body.not-frontpage.path-events-page .layout-content .front-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: auto 0;
+}
+body.not-frontpage.path-events-page .layout-content .front-row video,
+  body.not-frontpage.path-events-page .layout-content .front-text > p,
+  body.not-frontpage.path-events-page .layout-content .front-media img,
+  body.not-frontpage.path-events-page .layout-content .front-poster-image {
+  display: none;
+}
+body.not-frontpage.path-events-page .layout-content .events_page_content {
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgrey;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager {
+  margin: 32px auto 0 auto;
+  margin: 2rem auto 0 auto;
+  grid-area: pager;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item {
+  display: block;
+  width: auto;
+  padding-right: 4px;
+  padding-right: 0.25rem;
+}
+body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item.is-active > a {
+  color: Gray;
+}
 @media screen and (min-width: 321px) {
+  body.not-frontpage.path-events-page .layout-content .front-text > p {
+    padding: 0 1.5rem;
+    display: block;
+    overflow: hidden;
+  }
+  body.not-frontpage.path-events-page .layout-content .front-text > h3 {
+    padding-left: 2rem;
+    margin: 0;
+  }
   body.not-frontpage.path-events-page .layout-content  li.pager__item::after {
     color: #00aeef;
     content: " : ";
@@ -2870,7 +2915,12 @@ body.not-frontpage.path-events-page .layout-content nav.pager > li.pager__item.i
 }
 @media screen and (min-width: 668px) {
   body.not-frontpage.path-events-page .layout-content .front-row {
-    height: 255px;
+    height: 270px;
+  }
+  body.not-frontpage.path-events-page .layout-content .front-row .front-poster-image {
+    display: block;
+    width: auto;
+    margin: auto 0;
   }
   body.not-frontpage.path-events-page .layout-content .front-row .front-text > p {
     padding: 0 1.5rem;
@@ -2878,7 +2928,7 @@ body.not-frontpage.path-events-page .layout-content nav.pager > li.pager__item.i
     overflow: hidden;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   body.not-frontpage.path-events-page .layout-content .front-row .front-media.thumbscrubber,
       body.not-frontpage.path-events-page .layout-content .front-row .front-row video,
       body.not-frontpage.path-events-page .layout-content .front-row .front-media img {
