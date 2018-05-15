@@ -114,8 +114,8 @@ body.not-frontpage.path-events-page .layout-content {
   body.not-frontpage.path-events-page .layout-content {
     & .front-row {
       & .front-media.thumbscrubber,
-      & .front-row video,
-      & .front-media img {
+      & video,
+      & .front-media.thumbscrubber img {
           display: block;
           width: 220px;
           height: 124px;

@@ -18,4 +18,8 @@
     margin: 0 auto;
     padding: 0.5rem;
   }
+  & > footer {
+    background-color: var(--colour-misfits-lightest-grey);
+    border-top: 1px solid var(--colour-misfits-light-grey);
+  }
 }

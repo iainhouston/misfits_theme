@@ -617,6 +617,10 @@ ul ul {
   padding: 8px;
   padding: 0.5rem;
 }
+#page > footer {
+  background-color: Whitesmoke;
+  border-top: 1px solid lightgrey;
+}
 /*
   Header with social media links from icons
 */
@@ -2930,8 +2934,8 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
 }
 @media screen and (min-width: 769px) {
   body.not-frontpage.path-events-page .layout-content .front-row .front-media.thumbscrubber,
-      body.not-frontpage.path-events-page .layout-content .front-row .front-row video,
-      body.not-frontpage.path-events-page .layout-content .front-row .front-media img {
+      body.not-frontpage.path-events-page .layout-content .front-row video,
+      body.not-frontpage.path-events-page .layout-content .front-row .front-media.thumbscrubber img {
     display: block;
     width: 220px;
     height: 124px;
