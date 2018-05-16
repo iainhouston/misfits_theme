@@ -4,7 +4,7 @@
 #page > header {
   background-color: var(--misfits-logo-grey);
   & > .social-icons {
-    height: 45px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     & a {

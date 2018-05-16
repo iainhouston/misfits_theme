@@ -11,7 +11,7 @@ body.path-frontpage {
 
 
 body.path-frontpage {
-    & header {
+    & .views-element-container header {
         grid-area: logo;
         & > img {
             max-height: 55vh;
@@ -26,7 +26,6 @@ body.path-frontpage {
         padding-bottom: 1rem;
     }
     & .front-row h3 {
-        /* font-family: stamPeteRegular; */
         margin-top: 0;
         font-family: var(--headings-font-family);
         font-weight: var(--headings-font-weight);
@@ -37,6 +36,9 @@ body.path-frontpage {
     }
     & .front-text {
       flex: 1;
+      & p {
+        height: 0;
+      }
     }
     & .front-media.thumbscrubber,
     & .front-row video,
@@ -72,7 +74,7 @@ body.path-frontpage {
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
     & .views-element-container > div {
-      margin: 2rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
+      margin: 0 1rem var(--front-views-element-container-bottom-margin) 1rem;
     }
     & .front-row {
         padding-left: 2rem;
@@ -82,11 +84,9 @@ body.path-frontpage {
           height: 100%;
           width: auto;
         }
-    }
-    & .front-text > p {
-        padding: 0 1.5rem;
-        display: block;
-        overflow: hidden;
+        & h3 {
+          margin-top: 12px;
+        }
     }
     & .front-media.thumbscrubber,
     & .front-row video,

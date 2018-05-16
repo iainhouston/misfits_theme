@@ -16,10 +16,13 @@
   & > footer > .region_footer {
     max-width: var(--container-max-width-lg);
     margin: 0 auto;
-    padding: 0.5rem;
+    padding-bottom: 1rem;
   }
   & > footer {
     background-color: var(--colour-misfits-lightest-grey);
     border-top: 1px solid var(--colour-misfits-light-grey);
+    & > .region_footer {
+      margin: 0.5rem;
+    }
   }
 }

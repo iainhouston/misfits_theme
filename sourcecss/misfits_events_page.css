@@ -3,26 +3,23 @@ body.not-frontpage.path-events-page {
     display: grid;
     grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
     grid-template-areas:
-    ".    .         ."
     ".    content   ."
     ".    pager     .";
   }
 }
 
 body.not-frontpage.path-events-page .layout-content {
-  & header {
-      grid-area: logo;
-      & > img {
-          max-height: 55vh;
-      }
+  & h1 {
+    text-align: center;
+    padding-top: 0.5rem;
   }
-  & .front_page_content,
   & .events_page_content {
       grid-area: content;
+      margin: 0.5rem;
   }
   & .front-row {
       display: flex;
-      padding-top: 1rem;
+      padding-top: 0;
       padding-bottom: 1rem;
       border-top: 1px solid var(--colour-misfits-light-grey);
   }
@@ -44,7 +41,8 @@ body.not-frontpage.path-events-page .layout-content {
   }
   & .front-text {
     flex: 1;
-    margin: auto 0;
+    margin: auto 0.5rem;
+    max-width: 40rem;
   }
   & .front-row video,
   & .front-text > p,

@@ -1,6 +1,10 @@
 #page > .primary_menu_wrapper {
   background-color: var(--colour-misfits-lightest-grey-transparent);
 }
+#page .region_primary-menu {
+  display: flex;
+  justify-content: space-between;
+}
 
 .responsive-menu-block-wrapper {
   display: none;
@@ -64,7 +68,8 @@ html.mm-opened .mm-page {
 .horizontal-menu > li {
   display: inline-block;
   position: relative;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .horizontal-menu > li ul ul {

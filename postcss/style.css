@@ -614,12 +614,16 @@ ul ul {
   #page > footer > .region_footer {
   max-width: 1199px;
   margin: 0 auto;
-  padding: 8px;
-  padding: 0.5rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 #page > footer {
   background-color: Whitesmoke;
   border-top: 1px solid lightgrey;
+}
+#page > footer > .region_footer {
+  margin: 8px;
+  margin: 0.5rem;
 }
 /*
   Header with social media links from icons
@@ -628,7 +632,7 @@ ul ul {
   background-color: rgb(88, 88, 90)
 }
 #page > header > .social-icons {
-  height: 45px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1897,6 +1901,14 @@ ul ul {
 #page > .primary_menu_wrapper {
   background-color: rgba(245, 245, 245, .9);
 }
+#page .region_primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .responsive-menu-block-wrapper {
   display: none;
 }
@@ -1957,8 +1969,10 @@ html.mm-opened .mm-page {
 .horizontal-menu > li {
   display: inline-block;
   position: relative;
-  padding-right: 32px;
-  padding-right: 2rem;
+  padding-left: 16px;
+  padding-left: 1rem;
+  padding-right: 16px;
+  padding-right: 1rem;
 }
 .horizontal-menu > li ul ul {
   left: 13.75em;
@@ -2737,10 +2751,10 @@ body.path-frontpage .views-element-container > div {
     ".  .    .        ."
     ".  logo content  .";
 }
-body.path-frontpage header {
+body.path-frontpage .views-element-container header {
   grid-area: logo;
 }
-body.path-frontpage header > img {
+body.path-frontpage .views-element-container header > img {
   max-height: 55vh;
 }
 body.path-frontpage .front_page_content {
@@ -2756,7 +2770,6 @@ body.path-frontpage .front-row {
   padding-bottom: 1rem;
 }
 body.path-frontpage .front-row h3 {
-  /*font-family: stamPeteRegular; */
   margin-top: 0;
   font-family: stamPeteRegular;
   font-weight: 300;
@@ -2769,6 +2782,9 @@ body.path-frontpage .front-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+body.path-frontpage .front-text p {
+  height: 0;
 }
 body.path-frontpage .front-media.thumbscrubber,
     body.path-frontpage .front-row video,
@@ -2796,7 +2812,7 @@ body.path-frontpage .front-row video,
 }
 @media screen and (min-width: 668px) and (min-height: 654px)  {
   div.is_front .views-element-container > div {
-    margin: 2rem 1rem 4rem 1rem;
+    margin: 0 1rem 4rem 1rem;
   }
   div.is_front .front-row {
     padding-left: 2rem;
@@ -2807,10 +2823,8 @@ body.path-frontpage .front-row video,
     height: 100%;
     width: auto;
   }
-  div.is_front .front-text > p {
-    padding: 0 1.5rem;
-    display: block;
-    overflow: hidden;
+  div.is_front .front-row h3 {
+    margin-top: 12px;
   }
   div.is_front .front-media.thumbscrubber,
     div.is_front .front-row video,
@@ -2825,26 +2839,24 @@ body.not-frontpage.path-events-page .views-element-container > div {
   display: grid;
   grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
   grid-template-areas:
-    ".    .         ."
     ".    content   ."
     ".    pager     .";
 }
-body.not-frontpage.path-events-page .layout-content header {
-  grid-area: logo;
+body.not-frontpage.path-events-page .layout-content h1 {
+  text-align: center;
+  padding-top: 8px;
+  padding-top: 0.5rem;
 }
-body.not-frontpage.path-events-page .layout-content header > img {
-  max-height: 55vh;
-}
-body.not-frontpage.path-events-page .layout-content .front_page_content,
-  body.not-frontpage.path-events-page .layout-content .events_page_content {
+body.not-frontpage.path-events-page .layout-content .events_page_content {
   grid-area: content;
+  margin: 8px;
+  margin: 0.5rem;
 }
 body.not-frontpage.path-events-page .layout-content .front-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 16px;
-  padding-top: 1rem;
+  padding-top: 0;
   padding-bottom: 16px;
   padding-bottom: 1rem;
   border-top: 1px solid lightgrey;
@@ -2869,7 +2881,10 @@ body.not-frontpage.path-events-page .layout-content .front-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: auto 0;
+  margin: auto 8px;
+  margin: auto 0.5rem;
+  max-width: 640px;
+  max-width: 40rem;
 }
 body.not-frontpage.path-events-page .layout-content .front-row video,
   body.not-frontpage.path-events-page .layout-content .front-text > p,
