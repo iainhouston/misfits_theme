@@ -1,0 +1,10 @@
+body.not-frontpage.path-contact {
+  & #page > main > div.layout-content {
+  	margin: 0 auto;
+  	max-width: 40rem;
+  	text-align: center;
+  }
+  & h1 {
+    padding-top: 0.5rem;
+  }
+}

@@ -624,6 +624,7 @@ ul ul {
 #page > footer > .region_footer {
   margin: 8px;
   margin: 0.5rem;
+  text-align: center;
 }
 /*
   Header with social media links from icons
@@ -639,6 +640,8 @@ ul ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 #page > header > .social-icons a {
   padding: 4px;
@@ -2738,6 +2741,7 @@ form > div {
   padding-bottom: 0.5rem;
   max-width: 480px;
   max-width: 30rem;
+  margin: 0 auto;
 }
 input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
 	outline: none;
@@ -2996,9 +3000,6 @@ body.not-frontpage.path-node #page > main div.region_content img,
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full {
-  /*width: 90%; */
-}
 body.not-frontpage.path-node article.node--type-article.node--view-mode-full > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3085,6 +3086,16 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > f
     max-width: 45rem;
     padding-bottom: 2rem;
   }
+}
+body.not-frontpage.path-contact #page > main > div.layout-content {
+  margin: 0 auto;
+  max-width: 640px;
+  max-width: 40rem;
+  text-align: center;
+}
+body.not-frontpage.path-contact h1 {
+  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 /*! Alerts */
 .alert {
