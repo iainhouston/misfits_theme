@@ -54,22 +54,6 @@ body.not-frontpage.path-events-page .layout-content {
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--colour-misfits-light-grey);
   }
-  & nav.pager {
-    margin: 2rem auto 0 auto;
-    grid-area: pager;
-    & ul {
-      list-style: none;
-      display: flex;
-      & > li.pager__item {
-        display: block;
-        width: auto;
-        padding-right: 0.25rem;
-      }
-      & > li.pager__item.is-active > a {
-        color: var(--colour-misfits-dark-grey);
-      }
-    }
-  }
 }
 
 @media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
@@ -83,10 +67,6 @@ body.not-frontpage.path-events-page .layout-content {
         padding-left: 2rem;
         margin: 0;
     }
-    &  li.pager__item::after {
-        color: var(--colour-misfits-blue);
-        content: " : ";
-      }
   }
 }
 

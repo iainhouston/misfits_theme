@@ -1,3 +1,9 @@
+body.path-search {
+  & #page > main > .layout-content {
+    width: 95%;
+    max-width: var(--content-width);
+  }
+}
 div#block-searchform {
   background-color: var(--colour-misfits-lightest-grey-transparent);
   padding-top: 8px;

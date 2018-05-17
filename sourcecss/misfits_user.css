@@ -1,0 +1,13 @@
+body.path-user {
+  & #page > main > .layout-content {
+    width: 95%;
+    max-width: var(--max-para-width);
+    & h1 {
+      padding-top: 0.5rem;
+    }
+    & form > * {
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+}

@@ -2131,6 +2131,11 @@ ul.menu.mm-listview a.is-active {
 .mm-panel_opened ul.mm-listview li.mm-listitem > a {
   color: #00aeef;
 }
+body.path-search #page > main > .layout-content {
+  width: 95%;
+  max-width: 960px;
+  max-width: 60rem;
+}
 div#block-searchform {
   background-color: rgba(245, 245, 245, .9);
   padding-top: 8px;
@@ -2739,6 +2744,7 @@ progress {
 form > div {
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
+  width: 95%;
   max-width: 480px;
   max-width: 30rem;
   margin: 0 auto;
@@ -2901,26 +2907,6 @@ body.not-frontpage.path-events-page .layout-content .events_page_content {
   padding-bottom: 2rem;
   border-bottom: 1px solid lightgrey;
 }
-body.not-frontpage.path-events-page .layout-content nav.pager {
-  margin: 32px auto 0 auto;
-  margin: 2rem auto 0 auto;
-  grid-area: pager;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item {
-  display: block;
-  width: auto;
-  padding-right: 4px;
-  padding-right: 0.25rem;
-}
-body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__item.is-active > a {
-  color: Gray;
-}
 @media screen and (min-width: 321px) {
   body.not-frontpage.path-events-page .layout-content .front-text > p {
     padding: 0 1.5rem;
@@ -2930,10 +2916,6 @@ body.not-frontpage.path-events-page .layout-content nav.pager ul > li.pager__ite
   body.not-frontpage.path-events-page .layout-content .front-text > h3 {
     padding-left: 2rem;
     margin: 0;
-  }
-  body.not-frontpage.path-events-page .layout-content  li.pager__item::after {
-    color: #00aeef;
-    content: " : ";
   }
 }
 @media screen and (min-width: 668px) {
@@ -3049,6 +3031,7 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > f
   margin-top: 1rem;
   margin-bottom: 16px;
   margin-bottom: 1rem;
+  text-align: center;
 }
 @media screen and (min-width: 376px) {
   body.not-frontpage.path-node #page > main .layout-content {
@@ -3096,6 +3079,45 @@ body.not-frontpage.path-contact #page > main > div.layout-content {
 body.not-frontpage.path-contact h1 {
   padding-top: 8px;
   padding-top: 0.5rem;
+}
+body.path-user #page > main > .layout-content {
+  width: 95%;
+  max-width: 640px;
+  max-width: 40rem;
+}
+body.path-user #page > main > .layout-content h1 {
+  padding-top: 8px;
+  padding-top: 0.5rem;
+}
+body.path-user #page > main > .layout-content form > * {
+  padding-left: 0;
+  margin: 0;
+}
+nav.pager {
+  margin: 32px auto 0 auto;
+  margin: 2rem auto 0 auto;
+  grid-area: pager
+}
+nav.pager ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav.pager ul > li.pager__item {
+  display: block;
+  width: auto;
+  padding-right: 4px;
+  padding-right: 0.25rem;
+}
+nav.pager ul > li.pager__item.is-active > a {
+  color: Gray;
+}
+@media screen and (min-width: 321px) {
+  li.pager__item::after {
+    color: #00aeef;
+    content: " : ";
+  }
 }
 /*! Alerts */
 .alert {
