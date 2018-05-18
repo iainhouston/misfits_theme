@@ -114,4 +114,20 @@ body.not-frontpage.path-node {
       }
     }
   }
+  body.not-frontpage.path-node.node--type-page {
+    & #page > main {
+      & .layout-content {
+        max-width: 45rem;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+        & .field-content.sponsor-image {
+          width: 330px;
+          float: left;
+        }
+        & .views-row {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
 }

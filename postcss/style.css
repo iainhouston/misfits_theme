@@ -626,6 +626,20 @@ ul ul {
   margin: 0.5rem;
   text-align: center;
 }
+.embedded-entity.align-left {
+  padding-right:16px;
+  padding-right:1rem;
+}
+.embedded-entity.align-right {
+  padding-left:16px;
+  padding-left:1rem;
+}
+.embedded-entity.align-center {
+  padding-left:16px;
+  padding-left:1rem;
+  padding-right:16px;
+  padding-right:1rem;
+}
 /*
   Header with social media links from icons
 */
@@ -3067,6 +3081,18 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > f
     display: block;
     /*width: 90%; */
     max-width: 45rem;
+    padding-bottom: 2rem;
+  }
+  body.not-frontpage.path-node.node--type-page #page > main .layout-content {
+    max-width: 45rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+  }
+  body.not-frontpage.path-node.node--type-page #page > main .layout-content .field-content.sponsor-image {
+    width: 330px;
+    float: left;
+  }
+  body.not-frontpage.path-node.node--type-page #page > main .layout-content .views-row {
     padding-bottom: 2rem;
   }
 }

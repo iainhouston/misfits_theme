@@ -27,3 +27,16 @@
     }
   }
 }
+
+.embedded-entity.align-left {
+  padding-right:1rem;
+}
+
+.embedded-entity.align-right {
+  padding-left:1rem;
+}
+
+.embedded-entity.align-center {
+  padding-left:1rem;
+  padding-right:1rem;
+}
