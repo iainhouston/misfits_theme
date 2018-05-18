@@ -62,6 +62,7 @@
 /*  If you change the breakpoint then also reconfigure responsive menu in the Drupal  */
 @custom-media --within-iPad-Portrait-width (max-width: 768px);
 @custom-media --exceeds-iPhone-6s-Portrait-width (min-width: 376px);
+@custom-media --exceeds-iPhone-6s-Portrait-height (min-height: 668px);
 @custom-media --exceeds-iPhone-6s-Landscape-width (min-width: 668px);
 @custom-media --exceeds-iPhone-6s-Landscape-height (min-height: 376px);
 @custom-media --exceeds-iPhone-6-Plus-Landscape-height (min-height: 414px);

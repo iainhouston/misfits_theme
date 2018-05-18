@@ -2775,6 +2775,9 @@ body.path-frontpage .views-element-container > div {
     ".  .    .        ."
     ".  logo content  .";
 }
+body.path-frontpage #page {
+  height: 100vh;
+}
 body.path-frontpage .views-element-container header {
   grid-area: logo;
 }
@@ -2832,6 +2835,14 @@ body.path-frontpage .front-row video,
 @media screen and (min-height: 414px) {
   div.is_front .views-element-container > div {
     margin: 4rem 1rem 4rem 1rem;
+  }
+}
+@media screen and (min-height: 668px) {
+  div.is_front #page > main > .layout-content {
+    padding-top: 7vh;
+  }
+  div.is_front #page > main > .layout-content .front-row h3 {
+    padding-top: 56px;
   }
 }
 @media screen and (min-width: 668px) and (min-height: 654px)  {

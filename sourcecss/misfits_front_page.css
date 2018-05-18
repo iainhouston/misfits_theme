@@ -11,6 +11,9 @@ body.path-frontpage {
 
 
 body.path-frontpage {
+    & #page {
+      height: 100vh;
+    }
     & .views-element-container header {
         grid-area: logo;
         & > img {
@@ -69,6 +72,17 @@ body.path-frontpage {
         margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
     }
+}
+
+@media screen and (--exceeds-iPhone-6s-Portrait-height) {
+  div.is_front {
+    & #page > main > .layout-content {
+      padding-top: 7vh;
+      & .front-row h3 {
+        padding-top: 56px;
+      }
+    }
+  }
 }
 
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
