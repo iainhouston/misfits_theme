@@ -2774,6 +2774,19 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"
 	outline: none;
   border-color: #00aeef;
 }
+body.path-frontpage main {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: calc(100% - 112px);
+}
 body.path-frontpage .views-element-container {
   display: -webkit-box;
   display: -ms-flexbox;
