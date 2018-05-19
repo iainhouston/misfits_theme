@@ -3,6 +3,9 @@ body.not-frontpage.path-contact {
   	margin: 0 auto;
   	max-width: var(--max-para-width);
   	text-align: center;
+    & #block-misfitsv4-misfitsv3-system-main {
+      min-height: 640px;
+    }
   }
   & h1 {
     padding-top: 0.5rem;

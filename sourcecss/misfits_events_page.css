@@ -52,14 +52,14 @@ body.not-frontpage.path-events-page .layout-content {
   }
   & .events_page_content {
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--colour-misfits-light-grey);
+    /* border-bottom: 1px solid var(--colour-misfits-light-grey); */
   }
 }
 
 @media screen and (--exceeds-Nokia-Lumia-520-portrait-width) {
   body.not-frontpage.path-events-page .layout-content {
     & .front-text > p {
-        padding: 0 1.5rem;
+        /* padding: 0 1.5rem; */
         display: block;
         overflow: hidden;
     }

@@ -601,6 +601,10 @@ ul ul {
   text-shadow: none !important;
 }
 /* Misfits main region wrappers */
+#page {
+  min-height: 100vh;
+  position: relative
+}
 #page > header,
   #page .primary_menu_wrapper,
   #page > main,
@@ -612,19 +616,22 @@ ul ul {
   #page > .primary_menu_wrapper > .region_primary_menu,
   #page > main > .layout-content,
   #page > footer > .region_footer {
-  max-width: 1199px;
   margin: 0 auto;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
+  /*padding-bottom: 1rem; */
+  max-width: 1199px;
 }
 #page > footer {
   background-color: Whitesmoke;
   border-top: 1px solid lightgrey;
+  padding: 16px;
+  padding: 1rem;
 }
-#page > footer > .region_footer {
-  margin: 8px;
-  margin: 0.5rem;
+#page > footer  > .region_footer {
   text-align: center;
+}
+#page > footer .field--name-body >p {
+  font-size: smaller;
+  margin: 0;
 }
 .embedded-entity.align-left {
   padding-right:16px;
@@ -639,6 +646,12 @@ ul ul {
   padding-left:1rem;
   padding-right:16px;
   padding-right:1rem;
+}
+@media screen and (min-height: 668px) {
+  #page  >footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 /*
   Header with social media links from icons
@@ -2297,6 +2310,12 @@ button > a, .button > a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
   list-style: none;
@@ -2358,18 +2377,6 @@ button:active:not(:disabled),
 button.active:not(:disabled),
 .button.active:not(.disabled){
   color: #99e4ff;
-}
-div.region_primary_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-div.region_content footer {
-  padding-top: 16px;
-  padding-top: 1rem;
 }
 .thumbscrubber {
     width: 220px;
@@ -2770,9 +2777,7 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"
 body.path-frontpage .views-element-container > div {
   display: grid;
   grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-  grid-template-rows: 2vh 600px;
   grid-template-areas:
-    ".  .    .        ."
     ".  logo content  .";
 }
 body.path-frontpage #page {
@@ -2780,6 +2785,15 @@ body.path-frontpage #page {
 }
 body.path-frontpage .views-element-container header {
   grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 body.path-frontpage .views-element-container header > img {
   max-height: 55vh;
@@ -2930,11 +2944,11 @@ body.not-frontpage.path-events-page .layout-content .front-row video,
 body.not-frontpage.path-events-page .layout-content .events_page_content {
   padding-bottom: 32px;
   padding-bottom: 2rem;
-  border-bottom: 1px solid lightgrey;
+  /*border-bottom: 1px solid var(--colour-misfits-light-grey); */
 }
 @media screen and (min-width: 321px) {
   body.not-frontpage.path-events-page .layout-content .front-text > p {
-    padding: 0 1.5rem;
+    /*padding: 0 1.5rem; */
     display: block;
     overflow: hidden;
   }
@@ -2975,6 +2989,10 @@ body.not-frontpage.path-node #page > main .layout-content {
   margin: 0;
   max-width: 100%;
 }
+body.not-frontpage.path-node #page > main .layout-content .field-content.sponsor-image {
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+}
 body.not-frontpage.path-node #page > main {
   padding-top: 8px;
   padding-top: 0.5rem;
@@ -3007,7 +3025,10 @@ body.not-frontpage.path-node #page > main div.region_content img,
   -webkit-box-shadow: 3px 3px 4px 2px lightgrey;
           box-shadow: 3px 3px 4px 2px lightgrey;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full > div {
+body.not-frontpage.path-node article.node--type-article {
+  /*& article.node--type-article.node--view-mode-full { */
+}
+body.not-frontpage.path-node article.node--type-article > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3020,14 +3041,14 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > d
       -ms-flex-align: center;
           align-items: center;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full > div > * {
+body.not-frontpage.path-node article.node--type-article > div > * {
   margin: 0 0 16px 0;
   margin: 0 0 1rem 0;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full div > div.field--name-field-photo-gallery {
+body.not-frontpage.path-node article.node--type-article div > div.field--name-field-photo-gallery {
   width: 100%;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full div.field--name-field-newsletter-image div.field__label {
+body.not-frontpage.path-node article.node--type-article div.field--name-field-newsletter-image div.field__label {
   font-family: stamPeteRegular;
   font-weight: 300;
   font-size: 24px;
@@ -3038,20 +3059,21 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full div
   margin-bottom: 8px;
   margin-bottom: .5rem;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full div.field--name-field-newsletter-image div.field__item > a > img {
+body.not-frontpage.path-node article.node--type-article div.field--name-field-newsletter-image div.field__item > a > img {
   display: block;
   margin: 0 auto;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full div.field--name-field-newsletter-image div.field__item > a > img[alt^="Default Misfits Poster image"] {
+body.not-frontpage.path-node article.node--type-article div.field--name-field-newsletter-image div.field__item > a > img[alt^="Default Misfits Poster image"] {
   display: none;
 }
-body.not-frontpage.path-node article.node--type-article.node--view-mode-full > footer  {
+body.not-frontpage.path-node article.node--type-article > footer  {
+  min-height: 170px;
   padding-top: 16px;
   padding-top: 1rem;
   border-top: 1px solid lightgrey;
   padding-bottom: 16px;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #686868;
+  /*border-bottom: 1px solid var(--colour-misfits-mid-grey); */
   margin-top: 16px;
   margin-top: 1rem;
   margin-bottom: 16px;
@@ -3096,12 +3118,14 @@ body.not-frontpage.path-node article.node--type-article.node--view-mode-full > f
   }
   body.not-frontpage.path-node.node--type-page #page > main .layout-content {
     max-width: 45rem;
+    /*min-height: 50vh; */
     padding-bottom: 2rem;
     margin: 0 auto;
   }
   body.not-frontpage.path-node.node--type-page #page > main .layout-content .field-content.sponsor-image {
     width: 330px;
     float: left;
+    margin: 0 0.5rem 0 0;
   }
   body.not-frontpage.path-node.node--type-page #page > main .layout-content .views-row {
     padding-bottom: 2rem;
@@ -3112,6 +3136,9 @@ body.not-frontpage.path-contact #page > main > div.layout-content {
   max-width: 640px;
   max-width: 40rem;
   text-align: center;
+}
+body.not-frontpage.path-contact #page > main > div.layout-content #block-misfitsv4-misfitsv3-system-main {
+  min-height: 640px;
 }
 body.not-frontpage.path-contact h1 {
   padding-top: 8px;
@@ -3129,6 +3156,11 @@ body.path-user #page > main > .layout-content h1 {
 body.path-user #page > main > .layout-content form > * {
   padding-left: 0;
   margin: 0;
+}
+@media screen and (min-height: 414px) {
+  body.path-user #page > main > .layout-content {
+    min-height: 25rem;
+  }
 }
 nav.pager {
   margin: 32px auto 0 auto;

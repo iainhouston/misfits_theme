@@ -2,9 +2,7 @@ body.path-frontpage {
   & .views-element-container > div {
     display: grid;
     grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-    grid-template-rows: 2vh 600px;
     grid-template-areas:
-    ".  .    .        ."
     ".  logo content  .";
   }
 }
@@ -16,6 +14,9 @@ body.path-frontpage {
     }
     & .views-element-container header {
         grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         & > img {
             max-height: 55vh;
         }

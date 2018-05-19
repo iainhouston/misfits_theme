@@ -11,3 +11,10 @@ body.path-user {
     }
   }
 }
+@media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
+  body.path-user {
+  & #page > main > .layout-content {
+    min-height: 25rem;
+    }
+  }
+}

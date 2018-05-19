@@ -1,5 +1,7 @@
 /* Misfits main region wrappers */
 #page {
+  min-height: 100vh;
+  position: relative;
   & > header,
   & .primary_menu_wrapper,
   & > main,
@@ -14,16 +16,20 @@
   & > .primary_menu_wrapper > .region_primary_menu,
   & > main > .layout-content,
   & > footer > .region_footer {
-    max-width: var(--container-max-width-lg);
     margin: 0 auto;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    max-width: var(--container-max-width-lg);
   }
   & > footer {
     background-color: var(--colour-misfits-lightest-grey);
     border-top: 1px solid var(--colour-misfits-light-grey);
-    & > .region_footer {
-      margin: 0.5rem;
+    padding: 1rem;
+    &  > .region_footer {
       text-align: center;
+    }
+    & .field--name-body >p {
+      font-size: smaller;
+      margin: 0;
     }
   }
 }
@@ -39,4 +45,10 @@
 .embedded-entity.align-center {
   padding-left:1rem;
   padding-right:1rem;
+}
+@media screen and (--exceeds-iPhone-6s-Portrait-height) {
+  #page  >footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
