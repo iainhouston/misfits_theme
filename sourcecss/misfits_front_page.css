@@ -1,9 +1,12 @@
-body.path-frontpage {
-  & .views-element-container > div {
-    display: grid;
-    grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
-    grid-template-areas:
-    ".  logo content  .";
+body.path-frontpage .views-element-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > div {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(600, auto) 1fr;
+  grid-template-areas:
+  ".  logo content  .";
   }
 }
 
@@ -67,30 +70,27 @@ body.path-frontpage {
     }
 }
 
-@media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
+/* @media screen and (--exceeds-iPhone-6-Plus-Landscape-height) {
   div.is_front {
     & .views-element-container > div {
         margin: 4rem 1rem var(--front-views-element-container-bottom-margin) 1rem;
       }
     }
-}
+} */
 
 @media screen and (--exceeds-iPhone-6s-Portrait-height) {
   div.is_front {
-    & #page > main > .layout-content {
-      padding-top: 7vh;
-      & .front-row h3 {
+    & #page .front-row h3 {
         padding-top: 56px;
       }
     }
   }
-}
 
 @media screen and (--exceeds-iPhone-6s-Landscape-width) and (--sufficient-front-row-height)  {
   div.is_front {
-    & .views-element-container > div {
+    /* & .views-element-container > div {
       margin: 0 1rem var(--front-views-element-container-bottom-margin) 1rem;
-    }
+    } */
     & .front-row {
         padding-left: 2rem;
         height: var(--front-row-height);
