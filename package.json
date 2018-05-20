@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Misfits Theatre theming toolchain",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iainhouston/misfitsv4.git"
@@ -17,7 +15,7 @@
   },
   "homepage": "https://github.com/iainhouston/misfitsv4#readme",
   "dependencies": {
-    "npm": "^5.8.0",
+    "npm": "~5.6.0",
     "shoelace-css": "^1.0.0-beta9"
   },
   "devDependencies": {
@@ -28,8 +26,6 @@
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
-    "postcss-nesting": "^4.2.1",
-    "postcss-reporter": "^5.0.0",
-    "postcss-url": "^7.3.1"
+    "postcss-reporter": "^5.0.0"
   }
 }

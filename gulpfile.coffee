@@ -1,8 +1,8 @@
 # project specific settings
 drushAlias      = '@misdev8'
+drushExecutable = "$DREX"
 test_site_name  = 'vagrant.misfitstheatre.test'
-
-cssSources   = [ 'sourcecss/**/*.css' ]
+cssSources = ['sourcecss/**/*.css']
 drupalPHPSources = [ '**/*.{php,inc,theme}' ]
 drupalTemplateSources = [ '**/*.html.twig' ]
 
@@ -10,26 +10,28 @@ drupalTemplateSources = [ '**/*.html.twig' ]
 gulp = require('gulp')
 shell = require('gulp-shell')
 postcss = require('gulp-postcss')
+pimport = require('postcss-import')
+cssnext = require('postcss-cssnext')
+browser_reporter = require('postcss-browser-reporter')
+reporter = require('postcss-reporter')
 browserSync = require('browser-sync').create()
 reload = browserSync.reload
 
-ERROR_LEVELS = ['error', 'warning']
+gulp.task 'drushPHP', shell.task([ "#{drushExecutable} #{drushAlias} cr" ])
 
-gulp.task 'drushPHP', shell.task([ "drush #{drushAlias} cr" ])
+gulp.task 'drushTwig', shell.task([ "#{drushExecutable} #{drushAlias} cache-clear theme-registry" ])
 
-gulp.task 'drushTwig', shell.task([ "drush #{drushAlias} cache-clear theme-registry" ])
-
+eporter = require('postcss-reporter')
 gulp.task 'css', ->
-  return gulp.src('sourcecss/style.css')
-  .pipe(postcss([
-    require('postcss-import')()
-    require('postcss-url')()
-    require('postcss-nesting')({})
-    require('postcss-cssnext')()
-    require('postcss-browser-reporter')()
-    require('postcss-reporter')()
+  gulp.src('sourcecss/style.css').pipe(postcss([
+    pimport
+    cssnext
+    reporter(
+      plugins: []
+      clearReportedMessages: false)
+    browser_reporter
   ]))
-  .pipe(gulp.dest('./postcss'))
+  .pipe gulp.dest('./postcss')
   .pipe browserSync.stream()
 
 gulp.task 'watch-server', [
