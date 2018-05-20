@@ -1,5 +1,6 @@
-body.maintenance-page {
+body.maintenance-page.path-frontpage {
   & header,  & main {
-    padding: 2rem;    
+    padding: 2rem;
+    display: block;  
   }
 }
