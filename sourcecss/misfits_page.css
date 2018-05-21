@@ -51,4 +51,7 @@
     position: absolute;
     bottom: 0;
   }
+  body.user-logged-in #page  >footer {
+    position:static;
+  }
 }
