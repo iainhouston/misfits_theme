@@ -11,12 +11,17 @@ div#block-searchform {
   & form {
     display: flex;
     background-color: var(--colour-misfits-lightest-grey-transparent);
+    & > div.form-item-keys,
+    & > div.form-actions {
+      width: auto;
+    }
   }
   & #edit-keys {
     margin: 1px;
   }
   & #edit-actions {
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   & .button.form-submit {
     display: block;

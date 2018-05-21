@@ -408,7 +408,7 @@ template {
   /* TODO: Iain: Harmonise with Shoelace*/ /* rgb(245,245,245 */
 }
 /*  If you change the breakpoint then also reconfigure responsive menu in the Drupal  */
-body.maintenance-page.path-frontpage header,  body.maintenance-page.path-frontpage main {
+body.maintenance-page header,  body.maintenance-page main {
   padding: 32px;
   padding: 2rem;
   display: block;
@@ -2175,12 +2175,18 @@ div#block-searchform form {
   display: flex;
   background-color: rgba(245, 245, 245, .9);
 }
+div#block-searchform form > div.form-item-keys,
+    div#block-searchform form > div.form-actions {
+  width: auto;
+}
 div#block-searchform #edit-keys {
   margin: 1px;
 }
 div#block-searchform #edit-actions {
   padding-left: 8px;
   padding-left: 0.5rem;
+  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 div#block-searchform .button.form-submit {
   display: block;
