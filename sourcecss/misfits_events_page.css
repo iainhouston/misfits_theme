@@ -19,8 +19,8 @@ body.not-frontpage.path-events-page .layout-content {
   }
   & .front-row {
       display: flex;
-      padding-top: 0;
-      padding-bottom: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
       border-top: 1px solid var(--colour-misfits-light-grey);
   }
   & .front-row h3 {
@@ -52,7 +52,6 @@ body.not-frontpage.path-events-page .layout-content {
   }
   & .events_page_content {
     padding-bottom: 2rem;
-    /* border-bottom: 1px solid var(--colour-misfits-light-grey); */
   }
 }
 
@@ -74,6 +73,7 @@ body.not-frontpage.path-events-page .layout-content {
   body.not-frontpage.path-events-page .layout-content {
     & .front-row {
       height: var(--events-row-height);
+      padding-top: 0.5rem;
       & .front-poster-image {
         display: block;
         width: auto;

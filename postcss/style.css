@@ -2940,9 +2940,10 @@ body.not-frontpage.path-events-page .layout-content .front-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 0;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
+  padding-top: 16px;
+  padding-top: 1rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
   border-top: 1px solid lightgrey;
 }
 body.not-frontpage.path-events-page .layout-content .front-row h3 {
@@ -2979,7 +2980,6 @@ body.not-frontpage.path-events-page .layout-content .front-row video,
 body.not-frontpage.path-events-page .layout-content .events_page_content {
   padding-bottom: 32px;
   padding-bottom: 2rem;
-  /*border-bottom: 1px solid var(--colour-misfits-light-grey); */
 }
 @media screen and (min-width: 321px) {
   body.not-frontpage.path-events-page .layout-content .front-text > p {
@@ -2995,6 +2995,7 @@ body.not-frontpage.path-events-page .layout-content .events_page_content {
 @media screen and (min-width: 668px) {
   body.not-frontpage.path-events-page .layout-content .front-row {
     height: 270px;
+    padding-top: 0.5rem;
   }
   body.not-frontpage.path-events-page .layout-content .front-row .front-poster-image {
     display: block;
