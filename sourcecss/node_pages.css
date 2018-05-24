@@ -70,6 +70,16 @@ body.not-frontpage.path-node {
       text-align: center;
     }
   }
+  & .node--type-page .flex_embed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-left: 1px solid var(--colour-misfits-light-grey);
+    border: 1px solid var(--colour-misfits-light-grey);
+    & > article {
+      padding: 0.5rem 0 1rem 0;
+    }
+  }
 }
 @media screen and (--exceeds-iPhone-6s-Portrait-width) {
   body.not-frontpage.path-node {
