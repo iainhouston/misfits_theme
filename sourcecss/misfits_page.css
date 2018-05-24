@@ -47,9 +47,9 @@
   padding-right:1rem;
 }
 @media screen and (--exceeds-iPhone-6s-Portrait-height) {
-  #page  >footer {
+  #page  > footer {
     position: absolute;
-    bottom: 0;
+    bottom: -4rem;
   }
   body.user-logged-in #page  >footer {
     position:static;
