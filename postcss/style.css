@@ -408,7 +408,7 @@ template {
   /* TODO: Iain: Harmonise with Shoelace*/ /* rgb(245,245,245 */
 }
 /*  If you change the breakpoint then also reconfigure responsive menu in the Drupal  */
-body.maintenance-page header,  body.maintenance-page main {
+body.not-frontpage.maintenance-page header,  body.not-frontpage.maintenance-page main,  body.path-frontpage.maintenance-page header,  body.path-frontpage.maintenance-page main {
   padding: 32px;
   padding: 2rem;
   display: block;
