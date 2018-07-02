@@ -141,8 +141,14 @@ body.not-frontpage.path-node {
           float: left;
           margin: 0 0.5rem 0 0;
         }
+        & .views-row, & h3 {
+          clear: both;
+        }
         & .views-row {
           padding-bottom: 2rem;
+        }
+        & h3 {
+          padding-top: 2rem;
         }
       }
     }

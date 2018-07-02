@@ -3178,8 +3178,14 @@ body.not-frontpage.path-node .node--type-page .flex_embed > article {
     float: left;
     margin: 0 0.5rem 0 0;
   }
+  body.not-frontpage.path-node.node--type-page #page > main .layout-content .views-row, body.not-frontpage.path-node.node--type-page #page > main .layout-content h3 {
+    clear: both;
+  }
   body.not-frontpage.path-node.node--type-page #page > main .layout-content .views-row {
     padding-bottom: 2rem;
+  }
+  body.not-frontpage.path-node.node--type-page #page > main .layout-content h3 {
+    padding-top: 2rem;
   }
 }
 body.not-frontpage.path-contact #page > main > div.layout-content {
