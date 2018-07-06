@@ -2999,7 +2999,8 @@ body.not-frontpage.path-events-page .layout-content .events_page_content {
   }
   body.not-frontpage.path-events-page .layout-content .front-row .front-poster-image {
     display: block;
-    width: auto;
+    width: 220px;
+    text-align: center;
     margin: auto 0;
   }
   body.not-frontpage.path-events-page .layout-content .front-row .front-text > p {

@@ -76,7 +76,8 @@ body.not-frontpage.path-events-page .layout-content {
       padding-top: 0.5rem;
       & .front-poster-image {
         display: block;
-        width: auto;
+        width: 220px;
+        text-align: center;
         margin: auto 0;
       }
       & .front-text > p {
